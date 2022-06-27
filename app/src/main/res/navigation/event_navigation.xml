@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_navigation"
+    app:startDestination="@id/selectEvenFragment">
+
+    <fragment
+        android:id="@+id/selectEvenFragment"
+        android:name="com.ebabu.event365live.host.fragments.SelectEventFragment"
+        android:label="SelectEventFragment">
+        <action
+            android:id="@+id/action_selectEventFragment_to_eventCategoryFragment"
+            app:destination="@+id/eventCategoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventCategoryFragment"
+        android:name="com.ebabu.event365live.host.fragments.EventCategoryFragment"
+        android:label="fragment_event_category"
+        tools:layout="@layout/fragment_event_category">
+        <action
+            android:id="@+id/action_eventCategoryFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="eventDao"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.ebabu.event365live.host.fragments.CreateEventFragment"
+        android:label="fragment_create_event"
+        tools:layout="@layout/fragment_create_event">
+        <action
+            android:id="@+id/action_createEventFragment_to_seatingAndPricingFragment"
+            app:destination="@id/seatingAndPricingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_createEventFragment_to_createEventFullEvent"
+            app:destination="@id/createEventFullEvent"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_createEventFragment_to_createTicketFragment"
+            app:destination="@id/createTicketFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_createEventFragment_to_minPaymentFragment"
+            app:destination="@id/minPaymentFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/createTicketFragment"
+        android:name="com.ebabu.event365live.host.fragments.ticket.CreateTicketFragment"
+        android:label="fragment_create_ticket"
+        tools:layout="@layout/fragment_create_ticket">
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_createTicketFragment_to_fullEventDetailFragment"
+            app:destination="@id/fullEventDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fullEventDetailFragment"
+        android:name="com.ebabu.event365live.host.fragments.ticket.FullEventDetailFragment"
+        android:label="fragment_full_event_detail"
+        tools:layout="@layout/fragment_full_event_detail">
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_seatingAndPricingFragment_to_createEventFullEvent"
+            app:destination="@id/createEventFullEvent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/minPaymentFragment"
+        android:name="com.ebabu.event365live.host.fragments.MinPaymentFragment"
+        android:label="fragment_min_payment"
+        tools:layout="@layout/fragment_min_payment">
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_seatingAndPricingFragment_to_createEventFullEvent"
+            app:destination="@id/createEventFullEvent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seatingAndPricingFragment"
+        android:name="com.ebabu.event365live.host.fragments.SeatingAndPricingFragment"
+        android:label="fragment_seating_and_pricing"
+        tools:layout="@layout/fragment_seating_and_pricing">
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_seatingAndPricingFragment_to_createEventFullEvent"
+            app:destination="@id/createEventFullEvent" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEventFullEvent"
+        android:name="com.ebabu.event365live.host.fragments.CreateEventFullEvent"
+        android:label="fragment_create_event_full_event"
+        tools:layout="@layout/fragment_create_event_full_event">
+        <argument
+            android:name="eventDAO"
+            android:defaultValue="@null"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true" />
+    </fragment>
+</navigation>

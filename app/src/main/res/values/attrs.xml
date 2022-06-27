@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScannerOverlay">
+        <attr name="square_width" format="integer" />
+        <attr name="square_height" format="integer" />
+        <attr name="line_color" format="color" />
+        <attr name="line_width" format="integer" />
+        <attr name="line_speed" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="BarcodeReaderFragment">
+        <attr name="auto_focus" format="boolean" />
+        <attr name="use_flash" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornersImageView">
+        <attr name="radius" format="dimension"/>
+
+        <attr name="image_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="square" value="1" />
+            <enum name="half" value="2" />
+            <enum name="halfplus" value="3" />
+            <enum name="threebytwo" value="4" />
+            <enum name="oneplus" value="5" />
+            <enum name="seventyFive" value="6" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RecyclerViewBouncy">
+        <attr name="tension" format="integer" />
+        <attr name="friction" format="integer" />
+        <attr name="speedFactor" format="integer" />
+        <attr name="gapLimit" format="integer" />
+        <attr name="viewCountEstimateSize" format="integer" />
+        <attr name="maxAdapterSizeToEstimate" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TicketView">
+        <attr name="ticketOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="ticketBackgroundColor" format="color" />
+        <attr name="ticketScallopRadius" format="dimension" />
+        <attr name="ticketScallopPositionPercent" format="float" />
+        <attr name="ticketShowBorder" format="boolean" />
+        <attr name="ticketBorderWidth" format="dimension" />
+        <attr name="ticketBorderColor" format="color" />
+        <attr name="ticketShowDivider" format="boolean" />
+        <attr name="ticketDividerWidth" format="dimension" />
+        <attr name="ticketDividerPadding" format="dimension" />
+        <attr name="ticketDividerColor" format="color" />
+        <attr name="ticketDividerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dash" value="1" />
+        </attr>
+        <attr name="ticketDividerDashGap" format="dimension" />
+        <attr name="ticketDividerDashLength" format="dimension" />
+        <attr name="ticketCornerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="rounded" value="1" />
+            <enum name="scallop" value="2" />
+        </attr>
+        <attr name="ticketCornerRadius" format="dimension" />
+        <attr name="android:elevation" />
+        <attr name="ticketElevation" format="dimension" />
+        <attr name="ticketBackgroundBeforeDivider" format="reference" />
+        <attr name="ticketBackgroundAfterDivider" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/helvetica_medium"
+                android:text="@string/update_phone"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@color/whiteLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    app:ccp_arrowColor="@color/grayLight"
+                    app:ccp_autoFormatNumber="false"
+                    app:ccp_contentColor="@color/grayLight"
+                    app:ccp_countryPreference="us,in"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ccp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/mob_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/helvetica"
+                    android:hint="@string/enter_phone"
+                    android:digits="@string/digit_number"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    app:layout_constraintBottom_toBottomOf="@+id/ccp"
+                    app:layout_constraintEnd_toStartOf="@+id/mob_img"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    app:layout_constraintTop_toTopOf="@+id/ccp"/>
+
+                <ImageView
+                    android:id="@+id/mob_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_19sdp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/mob_et"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mob_et"
+                    app:srcCompat="@drawable/tick" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnDecline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:background="@drawable/text_border_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_update"
+                app:layout_constraintEnd_toStartOf="@+id/btn_update"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toTopOf="@+id/btn_update">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/labelBlack"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/blue_left_gradient"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                android:gravity="center"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toEndOf="@+id/btnDecline"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica"
+                    android:text="@string/update"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
+

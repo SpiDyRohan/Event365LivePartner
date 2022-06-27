@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/themeBlue</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorAccent">@color/themeBlue</color>
+    <color name="whiteLight">#f7f6fb</color>
+    <color name="blueLight">#ece5f7</color>
+    <color name="colorGreen">#53D769</color>
+    <color name="themeBlue">#7966fe</color>
+    <color name="themeBlueLight">#9b97f0</color>
+    <color name="themeBlueTrans">#456351de</color>
+    <color name="labelBlack">#343a43</color>
+    <color name="labelBlackLight">#212121</color>
+    <color name="disableNavIconColor">#cbd3e1</color>
+    <color name="grayLight">#b6b7be</color>
+    <color name="light_gray">#707070</color>
+    <color name="colorTextHintLiteGrey">#c4c4c4</color>
+    <color name="lineGray">#dbdbde</color>
+    <color name="gray">#7d7d7d</color>
+    <color name="grayDark">#606060</color>
+    <color name="labelSubBlack">#484849</color>
+    <color name="blue">#5961e6</color>
+    <color name="purple">#b382f5</color>
+    <color name="skyBlue">#4fc1fc</color>
+    <color name="skyBluePurple">#95aefb</color>
+    <color name="orange">#fa9680</color>
+    <color name="pink">#f36d9c</color>
+    <color name="darkPurple">#d857dd</color>
+    <color name="indigo">#9255cf</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#6e7279</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparent_notification_color">#2effffff</color>
+    <color name="chip1">#833ac9</color>
+    <color name="chip2">#a84fdb</color>
+    <color name="chip3">#dd86e7</color>
+    <color name="chip4">#f4a3e1</color>
+    <color name="chip5">#ffc2ed</color>
+    <color name="whiteTransparentColor">#43CAD0CC</color>
+    <color name="redColor">#eb3131</color>
+    <color name="lightRedColor">#f24747</color>
+    <color name="darkBlueColor">#2000ff</color>
+    <color name="red_cancellation">#fe6666</color>
+    <color name="pinkishRedColor">#fe6666</color>
+
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteLight">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activity.VerifiyCode">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_64sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/verify_and_forgot_logo" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/authTitle20"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:text="@string/verifiy_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_arrow" />
+
+            <LinearLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.902"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+                <com.chaos.view.PinView
+                    android:id="@+id/firstPinView"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:hint=""
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cursorColor="@color/themeBlue"
+                    app:cursorWidth="2dp"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="4"
+                    app:itemHeight="48dp"
+                    app:itemRadius="1dp"
+                    app:itemSpacing="30dp"
+                    app:itemWidth="@dimen/_40sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lineColor="@color/lineGray"
+                    app:lineWidth="2dp"
+                    app:viewType="line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/create_acc_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_39sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_36sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@drawable/blue_btn"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.902"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:text="@string/verify"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                style="@style/authSubTitle14"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/_34sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_34sdp"
+                android:gravity="center_horizontal"
+                android:text="@string/verify_desc"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/resend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="16dp"
+                android:enabled="false"
+                android:fontFamily="@font/helvetica"
+                android:text="TextView"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/create_acc_btn"
+                app:layout_constraintStart_toStartOf="@+id/create_acc_btn"
+                app:layout_constraintTop_toBottomOf="@+id/create_acc_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

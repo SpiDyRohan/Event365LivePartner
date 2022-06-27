@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    &lt;!&ndash; Transparent Rectangle &ndash;&gt;-->
+    <!--    <item>-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <size-->
+    <!--                android:width="300dp"-->
+    <!--                android:height="80dp" />-->
+    <!--            <solid android:color="@android:color/transparent" />-->
+    <!--        </shape>-->
+    <!--    </item>-->
+
+    <!-- Colored Rectangle -->
+    <item android:bottom="20dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp">
+
+            </corners>
+            <stroke
+                android:width="2dp"
+                android:color="#f5f2fe" />
+            <size
+                android:width="300dp"
+                android:height="80dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+<!--    &lt;!&ndash; Bottom Triangle &ndash;&gt;-->
+<!--    <item-->
+<!--        android:bottom="30dp"-->
+<!--        android:left="90dp"-->
+<!--        android:right="110dp"-->
+<!--        android:top="40dp">-->
+<!--        <rotate android:fromDegrees="45">-->
+<!--            <shape android:shape="rectangle">-->
+<!--                <solid android:color="#FFFFFF" />-->
+<!--            </shape>-->
+<!--        </rotate>-->
+<!--        <shape>-->
+<!--            <stroke-->
+<!--                android:width="1dp"-->
+<!--                android:color="#f5f2fe" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+</layer-list>

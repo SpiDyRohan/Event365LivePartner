@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.ebabu.event365live.host.utils.StringUtils" />
+
+        <variable
+            name="user"
+            type="com.ebabu.event365live.host.entities.UserDAO" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteLight"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".fragments.MyProfile">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_box"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow_white" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/labe14Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/profile"
+            android:textColor="@color/whiteLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_32sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@android:color/white"
+                    android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.39"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout6"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:layout_marginTop="@dimen/_32sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/circleImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/avatar"
+                                app:civ_border_color="@color/themeBlue"
+
+                                app:civ_border_width="@dimen/_1sdp" />
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/floatingActionButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:backgroundTint="@color/themeBlue"
+                                app:fabSize="mini"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                                app:tint="@android:color/white" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/name_tv"
+                            style="@style/authSubTitle14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:gravity="center"
+                            android:text="@{user.name}"
+                            app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+                            app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_32sdp"
+                            android:text="@{StringUtils.getAddress(user.city,user.state)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/name_tv"
+                            app:layout_constraintStart_toStartOf="@id/name_tv"
+                            app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        style="@style/labe14Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/personal_details"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_19sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_19sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/full_name_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/digit_alpha"
+                            android:hint="@string/fullname"
+                            android:inputType="textPersonName"
+                            android:maxLength="32"
+                            android:text="@{user.name}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/mail_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:text="@{user.email}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/phone_no"
+                            android:inputType="phone"
+                            android:text="@{user.phoneNo}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/website_url_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/website_url"
+                            android:inputType="textEmailAddress"
+                            android:text="@{user.uRL}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/short_desc_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/short_info"
+                            android:text="@{user.shortInfo}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addrs_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/addrs"
+                            android:inputType="textPersonName"
+                            android:text="@{user.address}" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/city_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/city"
+                            android:inputType="textPersonName"
+                            android:text="@{user.city}"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/state_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/state"
+                            android:inputType="textPersonName"
+                            android:text="@{user.state}"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout8"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/zip_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/Zip"
+                            android:inputType="numberDecimal"
+                            android:text="@{user.zip}"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        style="@style/authSubTitle14"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:text="@string/allow_guest"
+                        app:layout_constraintEnd_toStartOf="@id/switchMaterial"
+                        app:layout_constraintStart_toStartOf="@id/textInputLayout9"
+                        app:layout_constraintTop_toBottomOf="@id/textInputLayout9"
+
+                        />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:checked="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout9"
+                        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/switchMaterial"
+                        app:layout_constraintStart_toStartOf="@+id/textView22"
+                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        style="@style/authSubTitle14"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:text="@string/guest_can_contact"
+                        app:layout_constraintStart_toStartOf="@+id/textView22"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/contact_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@+id/view5"
+                        app:layout_constraintStart_toStartOf="@+id/textView23"
+                        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/in_app_chip"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/in_app_only" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/phone_call_chip"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/phone_call" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/mail_chip"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/email" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/phone_edit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="@color/themeBlue"
+                        app:fabCustomSize="@dimen/_24sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+                        app:layout_constraintTop_toTopOf="@+id/textInputLayout3"
+                        app:srcCompat="@drawable/ic_small_edit"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginLeft="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_44sdp"
+                    android:background="@drawable/blue_btn"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.902"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                    <TextView
+                        android:id="@+id/updateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/update"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

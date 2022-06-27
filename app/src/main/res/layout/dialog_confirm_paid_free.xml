@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_custom_roud_corner"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/close_1" />
+
+            <TextView
+                android:id="@+id/textOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/helvetica_bold"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/is_it_free_event"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textOne"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10ssp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGrpFreePaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioBtnYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/helvetica"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtnNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:background="@null"
+                        android:fontFamily="@font/helvetica"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="@string/no"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvNextBtn"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/layoutTwo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_16ssp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/blue_btn"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14ssp" />
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

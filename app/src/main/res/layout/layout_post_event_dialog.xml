@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:shapeAppearance="@style/ShapeAppearance.UpperRoundedCorner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/close_1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_16sdp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/post_event"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:src="@drawable/icon_material_error" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica"
+                            android:lineSpacingExtra="2sp"
+                            android:text="@string/choosing_this_option"
+                            android:textColor="#343a43"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbAutoFill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-4dp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:checked="false"
+                        android:text="@string/auto_fill_from_previous_data"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <CheckBox
+                        android:id="@+id/cbContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-4dp"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:checked="false"
+                        android:text="@string/enter_contact_details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/caros"
+                        android:text="@string/enter_contact_details"
+                        android:textColor="#343a43"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/edittext_border_bg"
+                            app:ccp_showFlag="false"
+                            app:ccp_showFullName="false"
+                            app:ccp_showNameCode="false"
+                            app:ccp_showPhoneCode="true"
+                            app:ccp_textSize="@dimen/_12ssp"
+                            app:ccp_contentColor="@color/labelBlack"
+                            app:ccp_showArrow="false"
+                            app:ccp_arrowSize="0dp"
+                            app:ccp_arrowColor="@color/colorPrimary"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+                            app:ccpDialog_searchEditTextTint="@color/lineGray"
+                            app:ccpDialog_backgroundColor="@color/colorWhite"
+                            app:ccpDialog_textColor="@color/labelBlack"
+                            app:ccpDialog_fastScroller_bubbleColor="@color/colorWhite"
+                            app:ccpDialog_fastScroller_handleColor="@color/colorPrimary"
+                            app:ccpDialog_showTitle = "true"
+                            app:ccpDialog_keyboardAutoPopup="false"
+                            app:ccpDialog_showCloseIcon="true"
+                            app:ccpDialog_initialScrollToSelection="true"/>
+
+                        <EditText
+                            android:id="@+id/etMobileNumber"
+                            android:layout_toEndOf="@+id/ccp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/edittext_border_bg"
+                            android:hint="@string/enter_mobile_number"
+                            android:inputType="phone"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext_border_bg"
+                        android:hint="@string/enter_your_address"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/etWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext_border_bg"
+                        android:hint="@string/enter_website_url"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <CheckBox
+                        android:id="@+id/cbURL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-4dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:checked="false"
+                        android:text="@string/txt_enter_website_link"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <EditText
+                        android:id="@+id/etWebsiteOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext_border_bg"
+                        android:hint="@string/enter_website_url_m"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tvConfirmBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_33sdp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/blue_btn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/helvetica"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

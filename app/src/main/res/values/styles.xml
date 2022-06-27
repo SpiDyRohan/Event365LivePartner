@@ -1,0 +1,301 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textInputStyle">@style/AppTextField</item>
+    </style>
+
+
+    <style name="boardingTitle">
+        <item name="android:textColor">@color/whiteLight</item>
+        <item name="android:textSize">@dimen/_23ssp</item>
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+    </style>
+
+    <style name="boardingMessage" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+    <style name="boardingShortMessage" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+    <style name="authTitle20" parent="eventFont23SP">
+        <item name="android:textSize">@dimen/_20ssp</item>
+    </style>
+
+    <style name="authSubTitle14" parent="labe14Black">
+        <item name="android:textColor">@color/labelSubBlack</item>
+    </style>
+
+
+    <style name="desc12SPGray" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="loginEditText" parent="labe14Black">
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorTextHintLiteGrey
+        </item>
+
+    </style>
+
+    <style name="labe14Black" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/labelBlackLight</item>
+    </style>
+
+    <style name="Caros8Sp" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/grayLight</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+
+    </style>
+
+    <style name="labe20Black" parent="labe14Black">
+        <item name="android:textSize">@dimen/_20ssp</item>
+    </style>
+
+    <style name="labe14GrayLight" parent="labe14Black">
+        <item name="android:textColor">@color/grayLight</item>
+        <item name="android:textColorHint">@color/grayLight</item>
+    </style>
+
+
+    <style name="homeTitle" parent="eventFont23SP">
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:fontFamily">@font/helvetica_medium</item>
+
+
+    </style>
+
+    <style name="eventFont23SP" parent="boardingTitle">
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textColor">@color/labelBlack</item>
+    </style>
+
+    <style name="eventFont10SP" parent="eventFont23SP">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="ShapeAppearance.RoundCB" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+    </style>
+
+
+    <style name="ShapeAppearance.UpperRounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_12sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="ShapeAppearance.UpperRoundedCorner" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+    </style>
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@android:color/white</item>
+    </style>
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="MyChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipIcon">@drawable/chip_unchecked</item>
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipIconVisible">true</item>
+        <item name="checkedIcon">@drawable/ic_check</item>
+        <item name="android:textAppearance">@style/ChipVenueTextAppearance</item>
+    </style>
+
+
+    <style name="ChipVenueTextAppearance" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+    </style>
+
+
+    <style name="DropDownChip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="chipIcon">@drawable/tick_unchecked</item>
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipIconVisible">true</item>
+        <item name="checkedIcon">@drawable/tick</item>
+    </style>
+
+
+    <style name="CategoryChips" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CircularProgress" parent="Theme.MaterialComponents.Light">
+        <item name="colorAccent">@color/themeBlueLight</item>
+    </style>
+
+    <style name="ContactChip" parent="MyChipStyle">
+        <item name="rippleColor">@android:color/transparent</item>
+
+    </style>
+
+
+    <style name="ChipTextAppearance" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+    </style>
+
+    <style name="DetailChip" parent="MyChipStyle">
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="checkedIcon">@drawable/theme_circle</item>
+        <item name="android:textAppearance">@style/ChipTextAppearance</item>
+
+    </style>
+
+    <style name="DetailChip2" parent="DetailChip">
+        <item name="chipIcon">@android:color/transparent</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">@android:color/white</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/helvetica_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CollapsedAppBarTrans" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/helvetica_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="EventRating" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">@dimen/_32sdp</item>
+        <item name="android:minWidth">@dimen/_36sdp</item>
+        <item name="android:progressDrawable">@drawable/my_rating_bar</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@android:color/black</item>
+    </style>
+
+    <style name="ShapeAppearance.ImageViewer" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_18sdp</item>
+    </style>
+
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="TimeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/text_border_bg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/_7sdp</item>
+        <item name="android:paddingTop">@dimen/_3sdp</item>
+        <item name="android:paddingEnd">@dimen/_7sdp</item>
+        <item name="android:paddingBottom">@dimen/_3sdp</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:drawableEnd">@drawable/ic_down_arrow</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/labelBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:drawableRight">@drawable/ccp_ic_arrow_drop_down</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/helvetica_medium</item>
+    </style>
+
+    <style name="TabTicketTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/helvetica_medium</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="spinnerStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textSize">@dimen/_6ssp</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textColor">@color/labelBlack</item>
+    </style>
+
+
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+</resources>

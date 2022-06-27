@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:src="@drawable/tick_unchecked"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/img_layout"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="@drawable/tick_unchecked"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_thumb"
+            style="@style/boardingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_medium"
+            android:text="AB"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/img_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="@+id/img_layout"
+        app:srcCompat="@drawable/gray_edit" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/labe14Black"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/helvetica_medium"
+        android:text="View"
+
+        app:layout_constraintBottom_toBottomOf="@+id/img_layout"
+        app:layout_constraintEnd_toStartOf="@+id/img"
+        app:layout_constraintStart_toEndOf="@+id/img_layout"
+        app:layout_constraintTop_toTopOf="@+id/img_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

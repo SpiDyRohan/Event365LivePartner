@@ -1,0 +1,173 @@
+{
+  "project_info": {
+    "project_number": "689198147494",
+    "firebase_url": "https://eventlive365.firebaseio.com",
+    "project_id": "eventlive365",
+    "storage_bucket": "eventlive365.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689198147494:android:d01019cb054166a23fd167",
+        "android_client_info": {
+          "package_name": "com.ebabu.event365live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689198147494-2rdd5bsoc3dng4ch9b2p7rbvvgshcj17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "d9b0f3ff02c3235ac7ab94c2c887a30cfb11cf5f"
+          }
+        },
+        {
+          "client_id": "689198147494-71aggrd3pnuhggndjf1p99pav1h2msac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "a396b8831f484e4174d176832c66bde149dbc7ee"
+          }
+        },
+        {
+          "client_id": "689198147494-9r7sen2am297midef1senl8790v597di.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "73a0b5c08c5dae286b491e8ccedb85708343de33"
+          }
+        },
+        {
+          "client_id": "689198147494-buj6nvdn8gn5sb3vccrraeb6nept3n4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "a634c821d90465a0503321b6a98ddf4d9fb7f722"
+          }
+        },
+        {
+          "client_id": "689198147494-qof7jaa6equshuj06os7t6nldtkqeqbk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "7c0b21595dd8ffe7a6abe1a3cf27cb2fbcd9af45"
+          }
+        },
+        {
+          "client_id": "689198147494-viipp9qi6inn53d7dit1d0prt3abtva5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live",
+            "certificate_hash": "5014dc97e43a6a77eecb8761bbd8e240b8c84d5d"
+          }
+        },
+        {
+          "client_id": "689198147494-vnssiljlelmsn07akbeg7g9lsborrevc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbjDczacMmTvhcoaCjmlKDd8NhJ46iSjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689198147494-k7nfdf3cqf7v6m2b3kvictdmekrf8dqh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "689198147494-3au7mfi0fe0m54s2kuho094m4hhl25a7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eventhost.app",
+                "app_store_id": "1492460573"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689198147494:android:f9686e6567511ba23fd167",
+        "android_client_info": {
+          "package_name": "com.ebabu.event365live.host"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689198147494-13kk3bsnbc5ddgkpf1el90pp6sinuimd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live.host",
+            "certificate_hash": "a634c821d90465a0503321b6a98ddf4d9fb7f722"
+          }
+        },
+        {
+          "client_id": "689198147494-88s4ag094mhna10nboeegg4jbe5fc321.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live.host",
+            "certificate_hash": "73a0b5c08c5dae286b491e8ccedb85708343de33"
+          }
+        },
+        {
+          "client_id": "689198147494-cvbsol6tbjirr2gatlb47nc2g4sl7bqo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live.host",
+            "certificate_hash": "a396b8831f484e4174d176832c66bde149dbc7ee"
+          }
+        },
+        {
+          "client_id": "689198147494-hnhibo39upjgb33solbosg92089q81ia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live.host",
+            "certificate_hash": "d9b0f3ff02c3235ac7ab94c2c887a30cfb11cf5f"
+          }
+        },
+        {
+          "client_id": "689198147494-pvg3i4gqsbn15rk12i3jgu5atk4mo7nt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebabu.event365live.host",
+            "certificate_hash": "d930d4eb42ff3681f63cc50fbb2f8fecb8169adb"
+          }
+        },
+        {
+          "client_id": "689198147494-vnssiljlelmsn07akbeg7g9lsborrevc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbjDczacMmTvhcoaCjmlKDd8NhJ46iSjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689198147494-k7nfdf3cqf7v6m2b3kvictdmekrf8dqh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "689198147494-3au7mfi0fe0m54s2kuho094m4hhl25a7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eventhost.app",
+                "app_store_id": "1492460573"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

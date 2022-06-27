@@ -1,0 +1,98 @@
+com/applozic/mobicommons/ApplozicService.java
+ com.applozic.mobicommons.ApplozicService
+com/applozic/mobicommons/people/ALContactProcessor.java
+ com.applozic.mobicommons.people.ALContactProcessor
+com/applozic/mobicommons/json/AnnotationExclusionStrategy.java
+ com.applozic.mobicommons.json.AnnotationExclusionStrategy
+com/applozic/mobicommons/emoticon/EmojiconHandler.java
+ com.applozic.mobicommons.emoticon.EmojiconHandler
+com/applozic/mobicommons/call/CallService.java
+ com.applozic.mobicommons.call.CallService
+com/applozic/mobicommons/people/channel/Conversation.java
+ com.applozic.mobicommons.people.channel.Conversation
+com/applozic/mobicommons/commons/core/utils/SntpClient.java
+ com.applozic.mobicommons.commons.core.utils.SntpClient
+com/applozic/mobicommons/ALSpecificSettings.java
+ com.applozic.mobicommons.ALSpecificSettings
+com/applozic/mobicommons/file/FileUtils.java
+ com.applozic.mobicommons.file.FileUtils
+ com.applozic.mobicommons.file.FileUtils$1
+ com.applozic.mobicommons.file.FileUtils$2
+ com.applozic.mobicommons.file.FileUtils$3
+ com.applozic.mobicommons.file.FileUtils$4
+ com.applozic.mobicommons.file.FileUtils$GalleryFilterOptions
+com/applozic/mobicommons/people/channel/ChannelMetadata.java
+ com.applozic.mobicommons.people.channel.ChannelMetadata
+com/applozic/mobicommons/commons/core/utils/DBUtils.java
+ com.applozic.mobicommons.commons.core.utils.DBUtils
+com/applozic/mobicommons/commons/image/BitmapDecodingException.java
+ com.applozic.mobicommons.commons.image.BitmapDecodingException
+com/applozic/mobicommons/json/ArrayAdapter.java
+ com.applozic.mobicommons.json.ArrayAdapter
+com/applozic/mobicommons/commons/core/utils/DateUtils.java
+ com.applozic.mobicommons.commons.core.utils.DateUtils
+com/applozic/mobicommons/people/SearchListFragment.java
+ com.applozic.mobicommons.people.SearchListFragment
+com/applozic/mobicommons/people/channel/ChannelUtils.java
+ com.applozic.mobicommons.people.channel.ChannelUtils
+com/applozic/mobicommons/commons/core/utils/Utils.java
+ com.applozic.mobicommons.commons.core.utils.Utils
+ com.applozic.mobicommons.commons.core.utils.Utils$1
+com/applozic/mobicommons/file/FilePathFinder.java
+ com.applozic.mobicommons.file.FilePathFinder
+com/applozic/mobicommons/commons/core/utils/LocationInfo.java
+ com.applozic.mobicommons.commons.core.utils.LocationInfo
+com/applozic/mobicommons/commons/image/ImageCache.java
+ com.applozic.mobicommons.commons.image.ImageCache
+ com.applozic.mobicommons.commons.image.ImageCache$1
+ com.applozic.mobicommons.commons.image.ImageCache$RetainFragment
+com/applozic/mobicommons/people/contact/Contact.java
+ com.applozic.mobicommons.people.contact.Contact
+ com.applozic.mobicommons.people.contact.Contact$ContactType
+com/applozic/mobicommons/commons/core/utils/PermissionsUtils.java
+ com.applozic.mobicommons.commons.core.utils.PermissionsUtils
+com/applozic/mobicommons/BuildConfig.java
+ com.applozic.mobicommons.BuildConfig
+com/applozic/mobicommons/personalization/PersonalizedMessage.java
+ com.applozic.mobicommons.personalization.PersonalizedMessage
+com/applozic/mobicommons/people/channel/ChannelUserMapper.java
+ com.applozic.mobicommons.people.channel.ChannelUserMapper
+ com.applozic.mobicommons.people.channel.ChannelUserMapper$UserRole
+com/applozic/mobicommons/json/Exclude.java
+ com.applozic.mobicommons.json.Exclude
+com/applozic/mobicommons/people/contact/ContactUtils.java
+ com.applozic.mobicommons.people.contact.ContactUtils
+com/applozic/mobicommons/json/JsonMarker.java
+ com.applozic.mobicommons.json.JsonMarker
+com/applozic/mobicommons/commons/image/ImageUtils.java
+ com.applozic.mobicommons.commons.image.ImageUtils
+com/applozic/mobicommons/commons/image/ImageLoader.java
+ com.applozic.mobicommons.commons.image.ImageLoader
+ com.applozic.mobicommons.commons.image.ImageLoader$AsyncDrawable
+ com.applozic.mobicommons.commons.image.ImageLoader$BitmapWorkerTask
+com/applozic/mobicommons/json/GsonUtils.java
+ com.applozic.mobicommons.json.GsonUtils
+com/applozic/mobicommons/commons/image/PhotoDecodeRunnable.java
+ com.applozic.mobicommons.commons.image.PhotoDecodeRunnable
+ com.applozic.mobicommons.commons.image.PhotoDecodeRunnable$TaskRunnableDecodeMethods
+com/applozic/mobicommons/people/OnContactsInteractionListener.java
+ com.applozic.mobicommons.people.OnContactsInteractionListener
+com/applozic/mobicommons/commons/core/utils/Support.java
+ com.applozic.mobicommons.commons.core.utils.Support
+com/applozic/mobicommons/file/LocalStorageProvider.java
+ com.applozic.mobicommons.file.LocalStorageProvider
+com/applozic/mobicommons/json/ArrayAdapterFactory.java
+ com.applozic.mobicommons.json.ArrayAdapterFactory
+com/applozic/mobicommons/people/channel/Channel.java
+ com.applozic.mobicommons.people.channel.Channel
+ com.applozic.mobicommons.people.channel.Channel$GroupMetaDataType
+ com.applozic.mobicommons.people.channel.Channel$GroupType
+ com.applozic.mobicommons.people.channel.Channel$KmConversationStatus
+com/applozic/mobicommons/encryption/EncryptionUtils.java
+ com.applozic.mobicommons.encryption.EncryptionUtils
+com/applozic/mobicommons/json/JsonParcelableMarker.java
+ com.applozic.mobicommons.json.JsonParcelableMarker
+com/applozic/mobicommons/emoticon/EmoticonUtils.java
+ com.applozic.mobicommons.emoticon.EmoticonUtils
+com/applozic/mobicommons/commons/core/utils/LocationUtils.java
+ com.applozic.mobicommons.commons.core.utils.LocationUtils

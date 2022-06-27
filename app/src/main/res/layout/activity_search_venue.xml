@@ -1,0 +1,255 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_gradient"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".activity.ProfileActivity">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow_white" />
+
+        <TextView
+            android:id="@+id/tvShowCurrentLocation"
+            style="@style/labe14Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="?selectableItemBackground"
+            android:drawablePadding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="@string/current_location"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:drawableStartCompat="@drawable/near_me_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_arrow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/llSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <EditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:digits="@string/digit_alpha"
+                            android:fontFamily="@font/helvetica"
+                            android:hint="@string/search_venue"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"
+                            android:textColorHint="@color/grayLight"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/e_search_black"
+                            app:tint="#7966fe" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvDistance"
+                            style="@style/labe14Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:text="@string/distance" />
+
+                        <TextView
+                            android:id="@+id/tvShowDistance"
+                            style="@style/labe14Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_toStartOf="@id/btnApply"
+                            android:text="@string/_5_miles"
+                            android:textColor="#808080"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/seekBarDistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDistance"
+                            android:layout_toStartOf="@id/btnApply"
+                            android:max="100"
+                            android:maxHeight="@dimen/_6sdp"
+                            android:minHeight="@dimen/_5sdp"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            android:thumb="@drawable/custom_seek_bar_thumb" />
+
+                        <TextView
+                            style="@style/labe14Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/seekBarDistance"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:text="@string/zero"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            style="@style/labe14Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seekBarDistance"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:layout_toStartOf="@id/btnApply"
+                            android:text="@string/_100_m"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnApply"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:text="@string/apply"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_10ssp"
+                            app:cornerRadius="@dimen/_8sdp"
+                            app:strokeColor="@color/blue"
+                            app:strokeWidth="@dimen/_1sdp" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/no_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_80sdp"
+                            android:src="@drawable/no_venue"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            style="@style/homeTitle"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:text="@string/oops_you_don_t_have_any_venue"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView25"
+                            app:layout_constraintStart_toStartOf="@+id/imageView25"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/no_internet_layout"
+                    layout="@layout/layout_no_interne"
+                    android:visibility="gone" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@+id/enable_disable_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/top_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvRegularTicketName"
+                        style="@style/homeTitle"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Paid RSVP Ticket"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivEditRegular"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:srcCompat="@drawable/e_edit_icon"
+                        app:tint="@color/colorPrimary" />
+
+                    <ImageView
+                        android:id="@+id/del_btn"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_delete" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/discount_label"
+                    style="@style/authSubTitle14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/minimum_charges_label"
+                    style="@style/authSubTitle14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minimum_of_10_percent"
+                    android:textColor="@color/red_cancellation"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvTicketType"
+                    style="@style/authSubTitle14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Ticket Types"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPerTicketPrice"
+                        style="@style/Caros8Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="$ 00.00 / Ticket"
+                        android:textColor="@color/grayDark" />
+
+                    <TextView
+                        android:id="@+id/tvPersonPerTable"
+                        style="@style/Caros8Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPerTicketPrice"
+                        android:layout_alignParentStart="true"
+                        android:text="Person Per Table - 6"
+                        android:textColor="@color/grayDark"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvTotalTickets"
+                        style="@style/Caros8Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:text="Total Tickets"
+                        android:textColor="@color/grayDark" />
+
+                    <TextView
+                        android:id="@+id/tvTotalTable"
+                        style="@style/Caros8Sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPerTicketPrice"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:text="Total Table"
+                        android:textColor="@color/grayDark"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+</layout>

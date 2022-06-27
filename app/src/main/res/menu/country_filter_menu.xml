@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_country"
+        android:title="@string/choose_country" />
+    <item
+        android:id="@+id/item_city"
+        android:title="@string/select_city" />
+    <item
+        android:id="@+id/item_reset"
+        android:title="@string/reset" />
+</menu>

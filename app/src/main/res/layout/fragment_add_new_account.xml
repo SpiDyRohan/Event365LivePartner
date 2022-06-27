@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddNewAccountFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg" />
+
+        <ImageView
+            android:id="@+id/ivBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/helvetica"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/add_new_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_55sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackBtn"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvShowAddCardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/helvetica"
+                    android:text="@string/please_enter_account_details"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/white_custom_roud_corner"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvShowAddCardTitle">
+
+                    <LinearLayout
+                        android:id="@+id/layoutOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etEnterRoutingNoTIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEnterRoutingNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:hint="@string/routing_no"
+                                android:inputType="number"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="@dimen/_28sdp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                tools:ignore="RtlSymmetry" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etEnterBankNameTIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEnterBankName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:hint="@string/bank_name"
+                                android:inputType="text"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="@dimen/_28sdp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                tools:ignore="RtlSymmetry" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvShowBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutOne"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginEnd="@dimen/_10ssp"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivShowEmailTick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/layoutOne"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/tick" />
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutOne"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10ssp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEnterAccountNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:hint="@string/account_number"
+                                android:inputType="number"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="@dimen/_28sdp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                tools:ignore="RtlSymmetry" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivShowPassTick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/layoutTwo"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/tick" />
+
+                    <TextView
+                        android:id="@+id/tvAddAccountBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutTwo"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_18ssp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/blue_btn"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/add_account"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

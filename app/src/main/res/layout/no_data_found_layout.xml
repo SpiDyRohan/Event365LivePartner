@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:background="@drawable/bg"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/no_data_found"/>
+
+        <TextView
+            android:id="@+id/tvShowMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No records found!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/helvetica"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tvRetryBtn"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/round_white_container"
+            android:text="Retry"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

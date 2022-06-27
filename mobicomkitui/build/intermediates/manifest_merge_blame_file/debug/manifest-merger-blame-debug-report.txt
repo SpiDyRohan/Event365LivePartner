@@ -1,0 +1,356 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.applozic.mobicomkit.uiwidgets" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="16"
+7-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml
+8        android:targetSdkVersion="28" />
+8-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml
+9
+10    <uses-permission
+10-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:6:5-8:30
+11        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+11-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:7:9-65
+12        tools:node="merge" />
+12-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:8:9-27
+13    <uses-permission
+13-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:9:5-11:30
+14        android:name="android.permission.READ_CONTACTS"
+14-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:10:9-56
+15        tools:node="merge" />
+15-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:11:9-27
+16    <uses-permission
+16-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:12:5-14:30
+17        android:name="android.permission.VIBRATE"
+17-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:13:9-50
+18        tools:node="merge" />
+18-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:14:9-27
+19    <uses-permission
+19-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:15:5-17:30
+20        android:name="android.permission.READ_PHONE_STATE"
+20-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:16:9-59
+21        tools:node="merge" />
+21-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:17:9-27
+22    <uses-permission
+22-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:18:5-20:30
+23        android:name="android.permission.CALL_PHONE"
+23-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:19:9-53
+24        tools:node="merge" />
+24-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:20:9-27
+25    <uses-permission
+25-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:21:5-23:30
+26        android:name="android.permission.ACCESS_COARSE_LOCATION"
+26-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:22:9-65
+27        tools:node="merge" />
+27-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:23:9-27
+28    <uses-permission
+28-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:24:5-26:30
+29        android:name="android.permission.ACCESS_FINE_LOCATION"
+29-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:25:9-63
+30        tools:node="merge" />
+30-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:26:9-27
+31    <uses-permission
+31-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:27:5-29:30
+32        android:name="android.permission.READ_EXTERNAL_STORAGE"
+32-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:28:9-64
+33        tools:node="merge" />
+33-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:29:9-27
+34    <uses-permission
+34-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:30:5-32:30
+35        android:name="android.permission.RECORD_AUDIO"
+35-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:31:9-55
+36        tools:node="merge" />
+36-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:32:9-27
+37    <uses-permission
+37-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:33:5-35:30
+38        android:name="android.permission.CAMERA"
+38-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:34:9-49
+39        tools:node="merge" />
+39-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:35:9-27
+40
+41    <application>
+41-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:37:5-191:19
+42        <meta-data
+42-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:38:9-41:34
+43            android:name="share_text"
+43-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:39:13-38
+44            android:value="@string/invite_message"
+44-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:40:13-51
+45            tools:node="merge" />
+45-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:41:13-31
+46        <meta-data
+46-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:43:9-46:34
+47            android:name="activity.open.on.notification"
+47-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:44:13-57
+48            android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+48-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:45:13-105
+49            tools:node="merge" />
+49-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:46:13-31
+50
+51        <provider
+51-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:48:9-57:20
+52            android:name="com.applozic.mobicomkit.uiwidgets.ALFileProvider"
+52-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:49:13-76
+53            android:authorities="${applicationId}.provider"
+53-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:50:13-60
+54            android:exported="false"
+54-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:51:13-37
+55            android:grantUriPermissions="true"
+55-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:52:13-47
+56            tools:node="merge" >
+56-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:53:13-31
+57            <meta-data
+57-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:54:13-56:67
+58                android:name="android.support.FILE_PROVIDER_PATHS"
+58-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:55:17-67
+59                android:resource="@xml/applozic_provider_paths" />
+59-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:56:17-64
+60        </provider>
+61
+62        <activity
+62-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:59:9-65:34
+63            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+63-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:60:13-104
+64            android:configChanges="keyboardHidden|screenSize|locale|smallestScreenSize|screenLayout|orientation"
+64-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:61:13-113
+65            android:label="@string/app_name"
+65-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:62:13-45
+66            android:launchMode="singleTask"
+66-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:63:13-44
+67            android:theme="@style/ApplozicTheme"
+67-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:64:13-49
+68            tools:node="merge" />
+68-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:65:13-31
+69        <activity
+69-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:67:9-77:20
+70            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ContactSelectionActivity"
+70-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:68:13-108
+71            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+71-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:69:13-106
+72            android:launchMode="singleTop"
+72-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:70:13-43
+73            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+73-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:71:13-118
+74            android:theme="@style/ApplozicTheme"
+74-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:72:13-49
+75            tools:node="merge" >
+75-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:73:13-31
+76            <meta-data
+76-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+77                android:name="android.support.PARENT_ACTIVITY"
+77-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+78                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+78-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+79        </activity>
+80        <activity
+80-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:79:9-89:20
+81            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelCreateActivity"
+81-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:80:13-105
+82            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+82-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:81:13-106
+83            android:launchMode="singleTop"
+83-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:82:13-43
+84            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+84-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:83:13-118
+85            android:theme="@style/ApplozicTheme"
+85-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:84:13-49
+86            tools:node="merge" >
+86-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:85:13-31
+87            <meta-data
+87-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+88                android:name="android.support.PARENT_ACTIVITY"
+88-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+89                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+89-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+90        </activity>
+91        <activity
+91-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:91:9-102:20
+92            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.MobiComAttachmentSelectorActivity"
+92-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:92:13-117
+93            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+93-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:93:13-106
+94            android:launchMode="singleTop"
+94-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:94:13-43
+95            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+95-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:95:13-118
+96            android:theme="@style/ApplozicTheme"
+96-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:96:13-49
+97            android:windowSoftInputMode="stateHidden|adjustResize"
+97-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:97:13-67
+98            tools:node="merge" >
+98-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:98:13-31
+99            <meta-data
+99-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+100                android:name="android.support.PARENT_ACTIVITY"
+100-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+101                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+101-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+102        </activity>
+103        <activity
+103-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:104:9-110:34
+104            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelNameActivity"
+104-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:105:13-103
+105            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+105-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:106:13-106
+106            android:launchMode="singleTop"
+106-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:107:13-43
+107            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+107-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:108:13-118
+108            android:theme="@style/ApplozicTheme"
+108-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:109:13-49
+109            tools:node="merge" />
+109-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:110:13-31
+110        <activity
+110-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:112:9-122:20
+111            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelInfoActivity"
+111-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:113:13-103
+112            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+112-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:114:13-106
+113            android:launchMode="singleTop"
+113-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:115:13-43
+114            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+114-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:116:13-118
+115            android:theme="@style/ApplozicTheme"
+115-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:117:13-49
+116            tools:node="merge" >
+116-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:118:13-31
+117            <meta-data
+117-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+118                android:name="android.support.PARENT_ACTIVITY"
+118-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+119                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+119-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+120        </activity>
+121        <activity
+121-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:124:9-130:34
+122            android:name="com.applozic.mobicomkit.uiwidgets.conversation.richmessaging.payment.PaymentActivity"
+122-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:125:13-112
+123            android:configChanges="keyboardHidden|orientation|screenSize"
+123-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:126:13-74
+124            android:label="Image"
+124-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:127:13-34
+125            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+125-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:128:13-118
+126            android:theme="@style/ApplozicTheme"
+126-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:129:13-49
+127            tools:node="merge" />
+127-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:130:13-31
+128        <activity
+128-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:132:9-135:34
+129            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+129-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:133:13-76
+130            android:theme="@style/Base.Theme.AppCompat"
+130-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:134:13-56
+131            tools:node="merge" />
+131-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:135:13-31
+132        <activity
+132-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:137:9-170:20
+133            android:name="com.applozic.mobicomkit.uiwidgets.people.activity.MobiComKitPeopleActivity"
+133-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:138:13-102
+134            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+134-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:139:13-106
+135            android:label="@string/app_name"
+135-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:140:13-45
+136            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+136-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:141:13-118
+137            android:theme="@style/ApplozicTheme"
+137-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:142:13-49
+138            android:windowSoftInputMode="adjustResize"
+138-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:143:13-55
+139            tools:node="merge" >
+139-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:144:13-31
+140            <meta-data
+140-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+141                android:name="android.support.PARENT_ACTIVITY"
+141-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+142                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+142-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+143
+144            <intent-filter>
+144-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:149:13-151:29
+145                <action android:name="android.intent.action.SEARCH" />
+145-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:150:17-71
+145-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:150:25-68
+146            </intent-filter>
+147            <intent-filter>
+147-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:153:13-164:29
+148                <action android:name="android.intent.action.SEND" />
+148-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:154:17-69
+148-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:154:25-66
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:155:17-76
+150-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:155:27-73
+151
+152                <data android:mimeType="image/png" />
+152-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+152-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+153                <data android:mimeType="image/jpeg" />
+153-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+153-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+154                <data android:mimeType="image/webp" />
+154-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+154-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+155                <data android:mimeType="image/bmp" />
+155-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+155-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+156                <data android:mimeType="audio/*" />
+156-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+156-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+157                <data android:mimeType="video/*" />
+157-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+157-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+158                <data android:mimeType="text/plain" />
+158-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:17-54
+158-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:157:23-51
+159            </intent-filter>
+160
+161            <meta-data
+161-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:166:13-169:38
+162                android:name="android.app.searchable"
+162-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:167:17-54
+163                android:resource="@xml/searchable_contacts"
+163-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:168:17-60
+164                tools:node="merge" />
+164-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:169:17-35
+165        </activity>
+166        <activity
+166-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:172:9-182:20
+167            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.FullScreenImageActivity"
+167-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:173:13-107
+168            android:configChanges="keyboardHidden|orientation|screenSize"
+168-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:174:13-74
+169            android:label="Image"
+169-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:175:13-34
+170            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+170-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:176:13-118
+171            android:theme="@style/Applozic_FullScreen_Theme"
+171-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:177:13-61
+172            tools:node="merge" >
+172-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:178:13-31
+173            <meta-data
+173-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:74:13-76:112
+174                android:name="android.support.PARENT_ACTIVITY"
+174-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:75:17-63
+175                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+175-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:76:17-109
+176        </activity>
+177        <activity
+177-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:184:9-190:34
+178            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.MobicomLocationActivity"
+178-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:185:13-107
+179            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+179-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:186:13-106
+180            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+180-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:187:13-118
+181            android:theme="@style/ApplozicTheme"
+181-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:188:13-49
+182            android:windowSoftInputMode="adjustResize"
+182-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:189:13-55
+183            tools:node="merge" />
+183-->/Users/Ramakrishna/Documents/Viswanadha/EB/event365host/mobicomkitui/src/main/AndroidManifest.xml:190:13-31
+184    </application>
+185
+186</manifest>

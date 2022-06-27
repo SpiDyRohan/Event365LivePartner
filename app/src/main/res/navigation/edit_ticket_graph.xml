@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_navigation"
+    app:startDestination="@id/seatingAndPricingFragment">
+    <fragment
+        android:id="@+id/seatingAndPricingFragment"
+        android:name="com.ebabu.event365live.host.fragments.SeatingAndPricingFragment"
+        android:label="fragment_seating_and_pricing"
+        tools:layout="@layout/fragment_seating_and_pricing" >
+        <argument
+            android:name="eventDAO"
+            app:argType="com.ebabu.event365live.host.entities.CreateEventDAO"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_seatingAndPricingFragment_to_createEventFullEvent"
+            app:destination="@id/seatingAndPricingFragment" />
+    </fragment>
+
+</navigation>

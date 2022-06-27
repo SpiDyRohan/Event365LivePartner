@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.rsvp_invites.MyContactsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        app:srcCompat="@drawable/e_search_black" />
+
+                    <EditText
+                        android:id="@+id/search_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="@string/digit_alpha"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="@color/whiteLight"
+                app:cardCornerRadius="@dimen/_3sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/whiteLight">
+
+                    <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                         android:id="@+id/swipe"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent">-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/inviteBtn"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/inviteBtn"
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_20ssp"
+                            android:background="@drawable/blue_btn"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/helvetica_medium"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/invite"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <!--                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/no_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView25"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_80sdp"
+                            android:src="@drawable/no_data_found"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            style="@style/homeTitle"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:text="@string/no_data_found"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView25"
+                            app:layout_constraintStart_toStartOf="@+id/imageView25"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/pull_to_refresh"
+                            app:layout_constraintEnd_toEndOf="@+id/textView48"
+                            app:layout_constraintStart_toStartOf="@+id/textView48"
+                            app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/no_internet_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <include layout="@layout/layout_no_interne" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
+            android:id="@+id/mcvInviteDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/ivCloseBottomDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/close_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/e_mail" />
+
+                <ImageView
+                    android:id="@+id/ivWhatsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/whatsapp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</layout>

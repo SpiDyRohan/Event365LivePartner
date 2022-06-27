@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ebabu.event365live.host.viewmodels.AddUserViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteLight"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".activity.AddUser">
+
+        <ImageView
+
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/labe14Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/add_new_user"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_19sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_16sdp"
+
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/_50sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.39"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="1.0">
+
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/contact_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_9sdp"
+                        android:paddingTop="@dimen/_14sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/host_chip"
+                            style="@style/ContactChip"
+                            android:onClick="@{viewmodel::setUserType}"
+                            android:text="@string/host" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/promotor_chip"
+                            style="@style/ContactChip"
+                            android:onClick="@{viewmodel::setUserType}"
+                            android:text="@string/promoter" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/member_chip"
+                            style="@style/ContactChip"
+                            android:onClick="@{viewmodel::setUserType}"
+                            android:text="@string/member" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        style="@style/labe14Black"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:text="@string/first_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_chip_group" />
+
+                    <EditText
+                        android:id="@+id/first_name_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="@string/digit_alpha"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_first_name"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="@dimen/_19sdp"
+                        android:singleLine="true"
+
+
+                        android:text="@={viewmodel.firstName}"
+
+                        android:textColor="@color/grayLight"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+
+                        app:layout_constraintEnd_toStartOf="@+id/first_name_img"
+                        app:layout_constraintStart_toStartOf="@+id/textView35"
+                        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/first_name_img"
+                        app:layout_constraintStart_toStartOf="@+id/first_name_et"
+                        app:layout_constraintTop_toBottomOf="@+id/first_name_et" />
+
+                    <ImageView
+                        android:id="@+id/first_name_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/first_name_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/first_name_et"
+                        app:srcCompat="@drawable/tick" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        style="@style/labe14Black"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/last_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <EditText
+                        android:id="@+id/last_name_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="@string/digit_alpha"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_lastname"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="@dimen/_19sdp"
+                        android:singleLine="true"
+                        android:text="@={viewmodel.lastName}"
+                        android:textColor="@color/grayLight"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/first_name_img"
+                        app:layout_constraintStart_toStartOf="@+id/textView36"
+                        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                    <ImageView
+                        android:id="@+id/lastname_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/last_name_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/last_name_et"
+                        app:srcCompat="@drawable/tick" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/lastname_img"
+                        app:layout_constraintStart_toStartOf="@+id/last_name_et"
+                        app:layout_constraintTop_toBottomOf="@+id/last_name_et" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        style="@style/labe14Black"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/email_id"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                    <EditText
+                        android:id="@+id/mail_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_mail_id"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="@dimen/_19sdp"
+                        android:text="@={viewmodel.mail}"
+                        android:textColor="@color/grayLight"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/mail_img"
+                        app:layout_constraintStart_toStartOf="@+id/textView37"
+                        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                    <ImageView
+                        android:id="@+id/mail_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/mail_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mail_et"
+                        app:srcCompat="@drawable/tick" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/mail_img"
+                        app:layout_constraintStart_toStartOf="@+id/mail_et"
+                        app:layout_constraintTop_toBottomOf="@+id/mail_et" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        style="@style/labe14Black"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/phone_no"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <EditText
+                        android:id="@+id/phone_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="@string/digit_phone"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_phone"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:paddingBottom="@dimen/_19sdp"
+                        android:singleLine="true"
+                        android:text="@={viewmodel.phone}"
+                        android:textColor="@color/grayLight"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+
+                        app:layout_constraintEnd_toStartOf="@+id/phone_img"
+                        app:layout_constraintStart_toStartOf="@+id/textView38"
+                        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                    <ImageView
+                        android:id="@+id/phone_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_14sdp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/phone_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/phone_et"
+                        app:srcCompat="@drawable/tick" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/phone_img"
+                        app:layout_constraintStart_toStartOf="@+id/phone_et"
+                        app:layout_constraintTop_toBottomOf="@+id/phone_et" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        style="@style/labe14Black"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+
+                    <EditText
+                        android:id="@+id/pwd_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="@string/digit_password"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_pwd"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="@dimen/_19sdp"
+
+                        android:singleLine="true"
+                        android:text="@={viewmodel.pwd}"
+                        android:textColor="@color/grayLight"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/phone_img"
+                        app:layout_constraintStart_toStartOf="@+id/textView39"
+                        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                    <ImageView
+                        android:id="@+id/pwd_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="@+id/pwd_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/pwd_et"
+                        app:srcCompat="@drawable/tick" />
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/pwd_img"
+                        app:layout_constraintStart_toStartOf="@+id/pwd_et"
+                        app:layout_constraintTop_toBottomOf="@+id/pwd_et" />
+
+                    <TextView
+                        android:id="@+id/used_title"
+                        style="@style/labe14Black"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:text="@string/this_acc_willbe_used_to"
+                        app:layout_constraintEnd_toEndOf="@+id/view10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/used_cg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_14sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/used_title"
+                        app:singleSelection="true"
+
+                        >
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/create_chip"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/create_and_list_event" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/manage_chip"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/manager_user" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/both"
+                            style="@style/ContactChip"
+                            android:layout_width="match_parent"
+                            android:text="@string/both" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/retry_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_37sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/blue_btn"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/save"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/no_internet_layout"
+            layout="@layout/layout_no_interne"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

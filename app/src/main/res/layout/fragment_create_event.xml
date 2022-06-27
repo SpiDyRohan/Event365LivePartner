@@ -1,0 +1,2173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ebabu.event365live.host.viewmodels.CreateEventViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteLight"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".fragments.createEventFragment">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/labe14Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/create_an_event"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_50sdp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.39"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        style="@style/labe14Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:text="@string/how_often"
+                        app:layout_constraintStart_toStartOf="@+id/textView34"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        style="@style/authSubTitle14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/basic_info"
+                        android:textSize="@dimen/_19ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/deteteEvent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:drawableStart="@drawable/e_delete_icon"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:drawableTint="@color/redColor"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/txt_delete_event"
+                        android:textColor="@color/redColor"
+                        android:textSize="@dimen/_13ssp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        style="@style/labe14Black"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:text="@string/name_of_event"
+                        app:layout_constraintStart_toStartOf="@+id/textView34"
+                        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+                    <EditText
+                        android:id="@+id/event_name_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/enter_name_of_event"
+                        android:inputType="textPersonName"
+                        android:maxLength="50"
+                        android:paddingTop="@dimen/_19sdp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView35"
+                        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/event_name_et"
+                        app:layout_constraintStart_toStartOf="@+id/event_name_et"
+                        app:layout_constraintTop_toBottomOf="@+id/event_name_et" />
+
+                    <View
+                        android:id="@+id/view15"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_19ssp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/event_name_et"
+                        app:layout_constraintStart_toStartOf="@+id/event_name_et"
+                        app:layout_constraintTop_toBottomOf="@+id/type_spinner" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/type_sub_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/event_name_et"
+                        app:layout_constraintStart_toStartOf="@+id/event_name_et"
+                        app:layout_constraintTop_toBottomOf="@+id/view15"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/type_sub_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica"
+                            android:text="Select"
+                            android:textColor="@color/grayLight"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@+id/type_sub_img"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/type_sub_view"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_19sdp"
+                            android:background="@color/lineGray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/type_sub_spinner" />
+
+                        <ImageView
+                            android:id="@+id/type_sub_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginRight="@dimen/_4sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/type_sub_spinner"
+                            app:srcCompat="@drawable/ic_dropdown_default_icon" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Spinner
+                        android:id="@+id/type_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                    <Spinner
+                        android:id="@+id/type_spinner2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/type_sub_layout" />
+
+                    <Spinner
+                        android:id="@+id/type_spinner3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/type_spinner2" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/cpp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:ccp_customMasterCountries="IN"
+                        tools:ignore="MissingConstraints" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/type_spinner2"
+                        tools:layout_editor_absoluteX="0dp">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView38"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_date"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imageView22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView38"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView38"
+                                    app:srcCompat="@drawable/ic_e_calendar" />
+
+                                <TextView
+                                    android:id="@+id/textView39"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_date"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView22"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView22" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView41"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView41"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView40"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_12ssp"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/end_date"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/end_date_img"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView40"
+                                    app:srcCompat="@drawable/ic_e_calendar" />
+
+                                <TextView
+                                    android:id="@+id/end_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_date"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_date_img"
+                                    app:layout_constraintStart_toEndOf="@+id/end_date_img"
+                                    app:layout_constraintTop_toTopOf="@+id/end_date_img" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray" />
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView42"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView42"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView42"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/txtviewmon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Monday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/monday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/monday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_mon"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_mon"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_mon"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_mon"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_mon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_mon"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_mon"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_mon" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_mon"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.352" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_mon"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="16dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_mon"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_mon"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_mon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_mon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.162"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_mon"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_mon"
+                                    app:layout_constraintVertical_bias="0.0" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewtues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Tuesday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/tuesday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/monday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/tuesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/monday"
+                        tools:layout_editor_absoluteX="0dp">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_tues"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_tues"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_tues"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_tues"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_tues"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_tues"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_tues"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_tues" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_tues"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_tues"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_tues"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_tues"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_tues"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_tues"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_tues"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_tues" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewwednes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Wednesday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/wednesday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/wednesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday"
+                        tools:layout_editor_absoluteX="0dp">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_wednes"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_wednes"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_wednes"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_wednes"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_wednes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_wednes"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_wednes"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_wednes" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_wednes"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_wednes"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_wednes"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_wednes"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_wednes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_wednes"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_wednes"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_wednes" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewthurs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Thursday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/thursday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/wednesday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/thursday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/wednesday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_thurs"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_thurs"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_thurs"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_thurs"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_thurs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_thurs"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_thurs"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_thurs" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_thurs"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_thurs"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_thurs"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_thurs"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_thurs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_thurs"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_thurs"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_thurs" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewfri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Friday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/friday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/friday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday"
+                        tools:layout_editor_absoluteX="0dp">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_fri"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_fri"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_fri"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_fri"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_fri"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_fri"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_fri"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_fri" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_fri"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_fri"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_fri"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_fri"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_fri"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_fri"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_fri"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_fri" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewsatur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Saturday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/saturday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/friday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/saturday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/friday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_satur"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_satur"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_satur"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_satur"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_satur"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_satur"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_satur"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_satur" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_satur"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_satur"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_satur"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_satur"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_satur"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_satur"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_satur"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_satur" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtviewsun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="Sunday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/sunday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/saturday"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:id="@+id/sunday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/saturday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_sun"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_sun"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_sun"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_sun"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_sun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_sun"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_sun"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_sun" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_sun"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.154"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.228" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_sun"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_sun"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_sun"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_sun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_sun"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_sun"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_sun" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/commonlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/sunday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/start_time_tv1_week"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img_week"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/start_time_tv1_week"
+                                    app:layout_constraintTop_toBottomOf="@+id/start_time_tv1_week"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv_week"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img_week"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img_week"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img_week" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                          <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/end_time_tv_week"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img_week"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/end_time_tv_week"
+                                    app:layout_constraintTop_toBottomOf="@+id/end_time_tv_week"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv2_week"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img_week"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img_week"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img_week" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/commonlayout"
+                        app:layout_constraintTop_toBottomOf="@+id/commonlayout">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/venue_name_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12sdp">
+
+                            <TextView
+                                android:id="@+id/loc_venue_name_tv"
+                                style="@style/labe14Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12ssp"
+                                android:text="@string/venue_name"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/venue_name_et"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/helvetica"
+                                android:hint="enter venue name"
+                                android:inputType="textPersonName"
+                                android:paddingEnd="@dimen/_19sdp"
+                                android:paddingRight="@dimen/_19sdp"
+                                android:paddingBottom="@dimen/_19sdp"
+                                android:textColor="@color/gray"
+                                android:textColorHint="@color/grayLight"
+                                android:textSize="@dimen/_12ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@+id/loc_venue_name_tv"
+                                app:layout_constraintTop_toBottomOf="@+id/loc_venue_name_tv" />
+
+                            <View
+                                android:id="@+id/view49"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray"
+                                app:layout_constraintStart_toStartOf="@id/venue_name_et"
+                                app:layout_constraintTop_toBottomOf="@id/venue_name_et" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/location_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/loc_venue_tv"
+                                style="@style/labe14Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12ssp"
+                                android:text="Venue Location"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <EditText
+                                android:id="@+id/venue_loc_et"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:fontFamily="@font/helvetica"
+                                android:hint="enter venue location"
+                                android:paddingRight="@dimen/_19sdp"
+                                android:paddingBottom="@dimen/_19sdp"
+                                android:textColor="@color/gray"
+                                android:textColorHint="@color/grayLight"
+                                android:textSize="@dimen/_12ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/loc_venue_tv"
+                                app:layout_constraintTop_toBottomOf="@+id/loc_venue_tv" />
+
+
+                            <ImageView
+                                android:id="@+id/imageView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                app:layout_constraintBottom_toBottomOf="@+id/venue_loc_et"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/venue_loc_et"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <TextView
+                                android:id="@+id/tvSubVenue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:fontFamily="@font/helvetica"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/venue_loc_et"
+                                app:layout_constraintTop_toBottomOf="@+id/venue_loc_et" />
+
+                            <View
+                                android:id="@+id/view16"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView23"
+                                app:layout_constraintStart_toStartOf="@id/venue_loc_et"
+                                app:layout_constraintTop_toBottomOf="@id/tvSubVenue" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/venue_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/venue_image_tv"
+                                style="@style/labe14Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12ssp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:text="@string/venue_images"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/venue_rv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:paddingRight="@dimen/_19sdp"
+                                android:paddingBottom="@dimen/_19sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/venue_image_tv"
+                                app:layout_constraintTop_toBottomOf="@+id/venue_image_tv" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        style="@style/labe14Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:text="@string/gallery_img"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout" />
+
+                    <LinearLayout
+                        android:id="@+id/image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView43">
+
+                        <RelativeLayout
+                            android:id="@+id/add_image"
+                            android:layout_width="@dimen/_72sdp"
+                            android:layout_height="@dimen/_72sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:background="@drawable/add_image_box_bg">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/ic_add_event" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gallery_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvShowNote"
+                        style="@style/labe14Black"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/primary_event_msg"
+                        android:textColor="@color/lightRedColor"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintStart_toStartOf="@id/textView43"
+                        app:layout_constraintTop_toBottomOf="@id/image_layout" />
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        style="@style/labe14Black"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/event_details"
+                        app:layout_constraintStart_toStartOf="@id/textView43"
+                        app:layout_constraintTop_toBottomOf="@id/tvShowNote" />
+
+                    <EditText
+                        android:id="@+id/addition_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/eventDetails"
+                        android:inputType="textMultiLine"
+                        android:maxLength="4000"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="@+id/image_layout"
+                        app:layout_constraintStart_toStartOf="@id/textView44"
+                        app:layout_constraintTop_toBottomOf="@id/textView44" />
+
+
+                    <ImageView
+                        android:id="@+id/addition_et_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/addition_et"
+                        app:layout_constraintStart_toEndOf="@id/addition_et"
+                        app:srcCompat="@drawable/tick" />
+
+
+                    <View
+                        android:id="@+id/view17"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/layout"
+                        app:layout_constraintStart_toStartOf="@id/addition_et"
+                        app:layout_constraintTop_toBottomOf="@id/addition_et" />
+
+
+                    <TextView
+                        android:id="@+id/textView444"
+                        style="@style/labe14Black"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:text="@string/imp_info_add_on"
+                        app:layout_constraintStart_toStartOf="@id/view17"
+                        app:layout_constraintTop_toBottomOf="@id/view17" />
+
+                    <EditText
+                        android:id="@+id/addition_et2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/addInfo"
+                        android:inputType="textMultiLine"
+                        android:maxLength="250"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/grayLight"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/textView444"
+                        app:layout_constraintTop_toBottomOf="@id/textView444" />
+
+                    <ImageView
+                        android:id="@+id/addition_et2_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/addition_et2"
+                        app:layout_constraintStart_toEndOf="@id/addition_et2"
+                        app:srcCompat="@drawable/tick" />
+
+
+                    <View
+                        android:id="@+id/view177"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/layout"
+                        app:layout_constraintStart_toStartOf="@id/addition_et2"
+                        app:layout_constraintTop_toBottomOf="@id/addition_et2" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        style="@style/authSubTitle14"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="48dp"
+                        android:text="@string/paid_event"
+                        app:layout_constraintEnd_toEndOf="@+id/view177"
+                        app:layout_constraintStart_toStartOf="@+id/view177"
+                        app:layout_constraintTop_toBottomOf="@+id/addition_et2" />
+
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/contact_chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@+id/view17"
+                        app:layout_constraintStart_toStartOf="@+id/textView23"
+                        app:layout_constraintTop_toBottomOf="@+id/textView23"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/free"
+                            style="@style/DetailChip"
+                            android:checked="true"
+                            android:text="@string/free" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/paid"
+                            style="@style/DetailChip"
+                            android:text="@string/paid" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/both"
+                            style="@style/DetailChip"
+                            android:text="@string/both" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <View
+                        android:id="@+id/view19"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView23"
+                        app:layout_constraintStart_toStartOf="@id/contact_chip_group"
+                        app:layout_constraintTop_toBottomOf="@id/contact_chip_group" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sell_time_cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/switchLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView45"
+                                style="@style/homeTitle"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:text="@string/ticket_selling_start"
+                                android:textSize="@dimen/_19ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/sell_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:checked="true"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView45"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView45" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@+id/type_sub_view"
+                            tools:layout_editor_absoluteX="0dp">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/textView68"
+                                        style="@style/labe14Black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_12ssp"
+                                        android:layout_marginTop="@dimen/_19ssp"
+                                        android:text="@string/start_date"
+                                        android:visibility="gone"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/imageView52"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_19sdp"
+                                        android:layout_marginBottom="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView68"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView68"
+                                        app:srcCompat="@drawable/ic_e_calendar" />
+
+                                    <TextView
+                                        android:id="@+id/textView59"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/imageView52"
+                                        app:layout_constraintStart_toEndOf="@+id/imageView52"
+                                        app:layout_constraintTop_toTopOf="@+id/imageView52" />
+                                    />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_marginLeft="@dimen/_12sdp"
+                                    android:layout_marginRight="@dimen/_12sdp"
+                                    android:background="@color/lineGray" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+
+                                    <TextView
+                                        android:id="@+id/textView71"
+                                        style="@style/labe14Black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_12ssp"
+                                        android:layout_marginTop="@dimen/_19ssp"
+                                        android:text="@string/start_time"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/start_time_img2"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginTop="@dimen/_19sdp"
+                                        android:layout_marginBottom="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView71"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView71"
+                                        app:srcCompat="@drawable/ic_clock_1" />
+                                    <TextView
+                                        android:id="@+id/start_time_tv2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/start_time_img2"
+                                        app:layout_constraintStart_toEndOf="@+id/start_time_img2"
+                                        app:layout_constraintTop_toTopOf="@+id/start_time_img2" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:id="@+id/textView70"
+                                        style="@style/labe14Black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_12ssp"
+                                        android:layout_marginTop="@dimen/_19ssp"
+                                        android:text="@string/end_date"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/end_date_img2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_19sdp"
+                                        android:layout_marginBottom="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView70"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView70"
+                                        app:srcCompat="@drawable/ic_e_calendar" />
+                                    <TextView
+                                        android:id="@+id/end_date_tv2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/end_date_img2"
+                                        app:layout_constraintStart_toEndOf="@+id/end_date_img2"
+                                        app:layout_constraintTop_toTopOf="@+id/end_date_img2" />
+                                    />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_marginLeft="@dimen/_12sdp"
+                                    android:layout_marginRight="@dimen/_12sdp"
+                                    android:background="@color/lineGray" />
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:id="@+id/textView72"
+                                        style="@style/labe14Black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_12ssp"
+                                        android:layout_marginTop="@dimen/_19ssp"
+                                        android:text="@string/end_time"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/end_time_img2"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginTop="@dimen/_19sdp"
+                                        android:layout_marginBottom="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView72"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView72"
+                                        app:srcCompat="@drawable/ic_clock_1" />
+                                    <TextView
+                                        android:id="@+id/end_time_tv2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_19sdp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/end_time_img2"
+                                        app:layout_constraintStart_toEndOf="@+id/end_time_img2"
+                                        app:layout_constraintTop_toTopOf="@+id/end_time_img2" />
+                                    />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_37sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@drawable/blue_btn"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.902"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/update_event"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_37sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.902"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                    <LinearLayout
+                        android:id="@+id/post_event"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_btn"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:text="@string/post_event"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/create_ticket"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_btn"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:text="@string/create_ticket"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33000000"
+            android:clickable="true"
+            android:visibility="gone">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_290sdp"
+                android:layout_marginRight="@dimen/_19sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ScrollView
+                    android:id="@+id/days_days_scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/days_chip_group"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        app:chipSpacingVertical="@dimen/_8sdp"
+                        app:singleSelection="true" />
+                </ScrollView>
+                <ScrollView
+                    android:id="@+id/month_scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/month_chip_group"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_200sdp"
+                        android:padding="@dimen/_4sdp"
+                        app:chipSpacingVertical="@dimen/_8sdp" />
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/myImg"
+            android:layout_width="@dimen/_72sdp"
+            android:layout_height="@dimen/_72sdp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/e_dummy"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

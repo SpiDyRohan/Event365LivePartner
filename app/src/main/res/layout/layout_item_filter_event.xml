@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/tvEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/helvetica"
+        android:text="show Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+</LinearLayout>

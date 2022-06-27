@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ShapeAppearance.RoundCB"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvShowEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_toStartOf="@id/cross_img"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:maxLines="2"
+                    android:text="@string/name_of_event"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp" />
+
+                <ImageView
+                    android:id="@+id/cross_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingEnd="@dimen/_8sdp"
+                    app:srcCompat="@drawable/ic_close_black_24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/clockIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_clock"
+                    android:backgroundTint="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvShowStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/clockIcon"
+                    android:text="@string/start_time" />
+
+                <View
+                    android:id="@+id/viewOne"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_toEndOf="@+id/tvShowStartTime"
+                    android:background="@color/grayLight" />
+
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/viewOne"
+                    android:text="sdfsdfsdkfjsdklfjsdklfjisdklsdvnklsdv" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/markerIcon"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_pin" />
+
+                <TextView
+                    android:id="@+id/tvShowEventAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/markerIcon"
+                    android:text="@string/addrs" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ticket_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/whiteLight"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:maxLines="2"
+                        android:text="@string/name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <TextView
+                        android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:maxLines="2"
+                        android:text="@string/price"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_16ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:maxLines="2"
+                        android:text="@string/account"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:maxLines="2"
+                        android:text="@string/account_no"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_left_gradient"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/resend_ticket"
+                        android:textColor="@color/whiteLight"
+                        android:textSize="@dimen/_14ssp"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/blue_left_gradient"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/cancel"
+                        android:textColor="@color/whiteLight"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp">
+
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:text="@string/email_address"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivShowQRCode"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mail_tv" />
+
+                    <TextView
+                        android:id="@+id/mail_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@string/email_id"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView58"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivShowQRCode"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:src="@drawable/qr_code"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:text="@string/billing_add" />
+
+                <TextView
+                    android:id="@+id/addrs_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:text="@string/addrs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+
+                <TextView
+                    android:id="@+id/contact_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:background="@drawable/blue_btn"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/contact"
+                    android:textColor="@color/whiteLight"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView>

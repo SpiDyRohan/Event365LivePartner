@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.ebabu.event365live.host.utils.StringUtils" />
+        <import type="android.view.View" />
+        <import type="android.R.id" />
+        <variable
+            name="dao"
+            type="com.ebabu.event365live.host.entities.CreateEventDAO" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteLight"
+        tools:context=".fragments.ticket.FullEventDetailFragment">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/labe14Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/event_full_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_50sdp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:background="@android:color/white"
+                    android:visibility="visible"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.39"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="1.0">
+
+
+                    <TextView
+                        android:id="@+id/tvEventName"
+                        style="@style/labe14Black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:text="@{dao.name}"
+                        app:layout_constraintEnd_toStartOf="@id/event_type_tv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/event_type_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@{StringUtils.eventType(dao.eventType)}"
+                        android:textSize="@dimen/_12ssp"
+                        tools:text="public"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvEventName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvEventName" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipText11"
+                        style="@style/DetailChip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@{dao.name}"
+                        app:checkedIcon="@drawable/radio_bg_checked"
+                        app:chipIconSize="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+                    <TextView
+                        android:id="@+id/cat_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/helvetica"
+                        android:text=""
+                        app:layout_constraintEnd_toEndOf="@id/chipText11"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/chipText11" />
+
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/chipText11"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/cat_id" />
+
+                    <View
+                        android:id="@+id/view15"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_19ssp"
+                        android:background="@color/lineGray"
+                        android:visibility="@{StringUtils.displayOccuredOn(dao.eventOccuranceType) ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintEnd_toEndOf="@+id/chipText11"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/type_spinner" />
+
+                    <View
+                        android:id="@+id/type_sub_view"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintEnd_toEndOf="@+id/chipText11"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/type_sub_spinner" />
+
+                    <TextView
+                        android:id="@+id/type_spinner"
+                        style="@style/Caros8Sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:textColor="@color/gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/type_sub_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@{dao.occorredOnDays}"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="@{StringUtils.displayOccuredOn(dao.eventOccuranceType) ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintEnd_toStartOf="@+id/type_sub_img"
+                        app:layout_constraintStart_toStartOf="@+id/tvEventName"
+                        app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+                    <ImageView
+                        android:id="@+id/type_sub_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/type_sub_spinner"
+                        app:srcCompat="@drawable/ic_dropdown_default_icon" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/type_sub_view"
+                        tools:layout_editor_absoluteX="0dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView38"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_date"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imageView22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView38"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView38"
+                                    app:srcCompat="@drawable/ic_e_calendar" />
+
+                                <TextView
+                                    android:id="@+id/textView39"
+                                    style="@style/Caros8Sp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:text="@{dao.startDate}"
+                                    android:textColor="@color/gray"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView22"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView22" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:id="@+id/textView41"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/start_time_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView41"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/start_time_tv"
+                                    style="@style/Caros8Sp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:text="@{dao.startTime}"
+                                    android:textColor="@color/gray"
+                                    app:layout_constraintBottom_toBottomOf="@+id/start_time_img"
+                                    app:layout_constraintStart_toEndOf="@+id/start_time_img"
+                                    app:layout_constraintTop_toTopOf="@+id/start_time_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView40"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/end_date"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/end_date_img"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView40"
+                                    app:srcCompat="@drawable/ic_e_calendar" />
+
+                                <TextView
+                                    android:id="@+id/end_date_tv"
+                                    style="@style/Caros8Sp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:text="@{dao.endDate}"
+                                    android:textColor="@color/gray"
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_date_img"
+                                    app:layout_constraintStart_toEndOf="@+id/end_date_img"
+                                    app:layout_constraintTop_toTopOf="@+id/end_date_img" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray" />
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView42"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_12ssp"
+                                    android:layout_marginTop="@dimen/_19ssp"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/end_time_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/textView42"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView42"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/end_time_tv"
+                                    style="@style/Caros8Sp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:text="@{dao.endTime}"
+                                    android:textColor="@color/gray"
+
+                                    app:layout_constraintBottom_toBottomOf="@+id/end_time_img"
+                                    app:layout_constraintStart_toEndOf="@+id/end_time_img"
+                                    app:layout_constraintTop_toTopOf="@+id/end_time_img" />
+                                />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/monday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/monday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/monday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/monday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/monday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/monday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/monday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/monday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/monday_strttime_img" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/monday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/monday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/monday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/monday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/monday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/monday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/monday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/monday_endtime_img" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/tuesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/monday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tuesday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/tuesday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/tuesday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/tuesday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/tuesday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/tuesday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/tuesday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/tuesday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tuesday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/tuesday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/tuesday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/tuesday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/tuesday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/tuesday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/tuesday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/tuesday_endtime_img" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/wednesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/wednesday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/wednesday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/wednesday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/wednesday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/wednesday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/wednesday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/wednesday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/wednesday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/wednesday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/wednesday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/wednesday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/wednesday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/wednesday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/wednesday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/wednesday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/wednesday_endtime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/thursday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/wednesday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/thursday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/thursday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/thursday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/thursday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/thursday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/thursday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/thursday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/thursday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/thursday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/thursday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/thursday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/thursday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/thursday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/thursday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/thursday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/thursday_endtime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/friday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/friday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/friday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/friday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/friday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/friday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/friday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/friday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/friday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/friday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/friday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/friday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/friday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/friday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/friday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/friday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/friday_endtime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/saturday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/friday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/saturday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/saturday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/saturday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/saturday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/saturday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/saturday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/saturday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/saturday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/saturday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/saturday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/saturday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/saturday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/saturday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/saturday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/saturday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/saturday_endtime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/sunday"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/saturday"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/sunday_strttime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/start_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.227"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/sunday_strttime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/sunday_strttime"
+                                    app:layout_constraintTop_toBottomOf="@+id/sunday_strttime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/sunday_strttime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/sunday_strttime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/sunday_strttime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/sunday_strttime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/sunday_endtime"
+                                    style="@style/labe14Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/end_time"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.149"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.242" />
+
+                                <ImageView
+                                    android:id="@+id/sunday_endtime_img"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginTop="@dimen/_19sdp"
+                                    android:layout_marginBottom="@dimen/_19sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="@+id/sunday_endtime"
+                                    app:layout_constraintTop_toBottomOf="@+id/sunday_endtime"
+                                    app:srcCompat="@drawable/ic_clock_1" />
+
+                                <TextView
+                                    android:id="@+id/sunday_endtime_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:inputType="time"
+                                    android:text="00:00"
+                                    app:layout_constraintBottom_toBottomOf="@+id/sunday_endtime_img"
+                                    app:layout_constraintStart_toEndOf="@+id/sunday_endtime_img"
+                                    app:layout_constraintTop_toTopOf="@+id/sunday_endtime_img" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/sunday"
+                        app:layout_constraintTop_toBottomOf="@+id/sunday">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/location_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/loc_venue_tv"
+                                style="@style/labe14Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/venue_loc_et"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:fontFamily="@font/helvetica"
+                                android:paddingRight="@dimen/_19sdp"
+                                android:paddingBottom="@dimen/_19sdp"
+                                android:textColor="@color/grayLight"
+                                android:textSize="@dimen/_12ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/loc_venue_tv"
+                                app:layout_constraintTop_toBottomOf="@+id/loc_venue_tv" />
+
+                            <ImageView
+                                android:id="@+id/imageView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/venue_loc_et"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/venue_loc_et"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:srcCompat="@drawable/ic_location" />
+
+                            <View
+                                android:id="@+id/view16"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/lineGray"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView23"
+                                app:layout_constraintStart_toStartOf="@id/venue_loc_et"
+                                app:layout_constraintTop_toBottomOf="@id/venue_loc_et" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/venue_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="@{StringUtils.displayLocLayout(dao.lat)?View.GONE:View.VISIBLE}">
+
+                            <TextView
+                                android:id="@+id/venue_image_tv"
+                                style="@style/labe14Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12ssp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:text="@string/venue_images"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/venue_rv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:hint="@string/enter_location_venue"
+                                android:paddingRight="@dimen/_19sdp"
+                                android:paddingBottom="@dimen/_19sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/venue_image_tv"
+                                app:layout_constraintTop_toBottomOf="@+id/venue_image_tv" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        style="@style/labe14Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12ssp"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:text="@string/gallery_img"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/horizontal_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/layout"
+                        app:layout_constraintStart_toStartOf="@+id/layout"
+                        app:layout_constraintTop_toBottomOf="@+id/textView43">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/desc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:visibility="visible"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_12sdp">
+
+                        <TextView
+                            android:id="@+id/desc_tv"
+                            style="@style/labe14Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:text="@string/description" />
+
+                        <TextView
+                            android:id="@+id/desc"
+                            style="@style/authSubTitle14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@{dao.desc}"
+                            tools:text="Every now" />
+
+                        <TextView
+                            android:id="@+id/desc2"
+                            style="@style/desc12SPGray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{dao.desc2}"
+                            tools:text="Every now" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/ticket_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ticket_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:visibility="visible"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_12sdp">
+
+                        <TextView
+                            android:id="@+id/textView64"
+                            style="@style/labe14Black"
+                            android:text="Ticket Preview" />
+
+                        <FrameLayout
+                            android:id="@+id/ticketFrameContainer"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_height="@dimen/_350sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/ivBackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.9"
+                                android:foreground="@drawable/sample_ticket_shadow"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sample_ticket" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_5sdp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_15sdp">
+
+                                    <TextView
+                                        android:id="@+id/tvTicketEventName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/helvetica_medium"
+                                        android:text="@{StringUtils.capitalizeWord(dao.name)}"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_18ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tvEventCode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:fontFamily="@font/helvetica_medium"
+                                        android:text="Event Code - #000000"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:adjustViewBounds="true"
+                                            android:src="@drawable/clock_white" />
+
+                                        <TextView
+                                            android:id="@+id/tvTicketDateTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:fontFamily="@font/helvetica"
+                                            android:gravity="center_vertical"
+                                            android:text="14 Sep,2018 | 02:00 - 08:00 PM"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11ssp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_3sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:adjustViewBounds="true"
+                                            android:src="@drawable/pin_white" />
+
+                                        <TextView
+                                            android:id="@+id/tvTicketAddress"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:fontFamily="@font/helvetica"
+                                            android:gravity="center_vertical"
+                                            android:text="@{dao.venueAddress}"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11ssp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/llBottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_15sdp">
+
+                                    <TextView
+                                        android:id="@+id/tvTicketDescription"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_above="@+id/llBottom"
+                                        android:layout_below="@+id/llTop"
+                                        android:fontFamily="@font/helvetica"
+                                        android:gravity="center_vertical"
+                                        android:paddingHorizontal="@dimen/_15sdp"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:text="@{dao.desc2}"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_margin="@dimen/_10sdp"
+                                        android:orientation="horizontal"
+                                        android:paddingHorizontal="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:src="@drawable/qcode" />
+
+                                        <TextView
+                                            android:id="@+id/tvTicketNumber"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/helvetica_medium"
+                                            android:padding="@dimen/_10sdp"
+                                            android:text="XXX00000"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_13ssp" />
+
+                                        <ImageView
+
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_gravity="bottom"
+                                            android:src="@drawable/share_ticket" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <LinearLayout
+                    android:id="@+id/submit_ticket"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:background="@drawable/blue_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_medium"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/submit_event"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

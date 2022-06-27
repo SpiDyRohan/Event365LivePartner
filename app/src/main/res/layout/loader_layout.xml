@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="loader"
+            type="com.ebabu.event365live.host.utils.MyLoader"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:theme="@style/CircularProgress"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="visible"/>
+
+        <!--<TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/montserrat_regular"-->/>
+
+    </LinearLayout>
+
+</layout>

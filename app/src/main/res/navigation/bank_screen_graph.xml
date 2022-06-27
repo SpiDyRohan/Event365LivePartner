@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bank_screen_graph.xml"
+    app:startDestination="@id/withdrawFragment">
+
+    <fragment
+        android:id="@+id/withdrawFragment"
+        android:name="com.ebabu.event365live.host.WithdrawFragment"
+        android:label="fragment_withdraw"
+        tools:layout="@layout/fragment_withdraw" >
+        <action
+            android:id="@+id/action_withdrawFragment_to_chooseBankAccountFragment"
+            app:destination="@id/chooseBankAccountFragment" />
+        <action
+            android:id="@+id/action_withdrawFragment_to_transectionHistoryFragment"
+            app:destination="@id/transactionHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseBankAccountFragment"
+        android:name="com.ebabu.event365live.host.ChooseBankAccountFragment"
+        android:label="fragment_choose_bank_account"
+        tools:layout="@layout/fragment_choose_bank_account">
+        <action
+            android:id="@+id/action_chooseBankAccountFragment_to_addNewAccountFragment"
+            app:destination="@id/addNewAccountFragment" />
+        <action
+            android:id="@+id/action_chooseBankAccountFragment_to_confirmWithdrawFragment"
+            app:destination="@id/confirmWithdrawFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewAccountFragment"
+        android:name="com.ebabu.event365live.host.AddNewAccountFragment"
+        android:label="fragment_add_new_account"
+        tools:layout="@layout/fragment_add_new_account">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmWithdrawFragment"
+        android:name="com.ebabu.event365live.host.ConfirmWithdrawFragment"
+        android:label="fragment_confirm_withdraw"
+        tools:layout="@layout/fragment_confirm_withdraw" >
+        <action
+            android:id="@+id/action_confirmWithdrawFragment_to_withdrawFragment"
+            app:destination="@id/withdrawFragment" />
+        <action
+            android:id="@+id/action_confirmWithdrawFragment_to_transactionHistoryFragment2"
+            app:destination="@id/transactionHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionHistoryFragment"
+        android:name="com.ebabu.event365live.host.TransactionHistoryFragment"
+        android:label="fragment_transaction_history"
+        tools:layout="@layout/fragment_transaction_history" />
+</navigation>

@@ -1,0 +1,535 @@
+<resources>
+
+    <string name="eventDetails" translatable="false">Enter event details       (Min.50 - Max.4000 words)</string>
+    <string name="addInfo" translatable="false">Enter add-on info (optional Max.250 words)</string>
+    <string name="enter_desc" translatable="false">enter description      (Min.0 - Max.200 words)</string>
+    <!--<string name="venue_desc">Description (Min.200 - Max.2500 words)</string>-->
+    <string name="venue_desc">Description (optional)</string>
+
+
+    <string name="digit_alpha">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="digit_number">0123456789</string>
+    <string name="digit_phone">+0123456789</string>
+    <string name="digit_alpha_number">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</string>
+    <string name="digit_password">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^</string>
+    <string name="app_name">365Live Partner</string>
+    <string name="loading">Loading</string>
+    <string name="currency">$</string>
+    <string name="faq_url">https://365live.com/profile/faq</string>
+    <string name="privacy_policy_url">https://365live.com/profile/privacy-policy</string>
+    <string name="terms_and_condition_url">https://365live.com/profile/terms-and-conditions</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="promote">Promote</string>
+
+    <string name="intro_desc1">spread the work and share details with your colleagues and team. You’re in control, you can manage and monitor user engagement, enjoy all of our convenient features like your RSVPs, our communication platform etc.</string>
+    <string name="intro_desc2">Want to build buzz and traffic for your events. With a few quick steps, you can create and share your event with even thousands of people. We make it convenient to keep track of your sales, validate tickets plus more.</string>
+    <string name="intro_desc3">We’re here to work with you to make sure that your event is a success. Promoting your events to get it in front of countless eyes, big or small so we can get more money into your accounts or your pockets promptly.</string>
+    <string name="intro_shortDesc1">You can now manage your events with ease.</string>
+    <string name="intro_shortDesc2">A better platform for Venues and event organizers.</string>
+    <string name="intro_shortDesc3">Promotion and marketing just got easier!</string>
+
+    <string name="get_started">Get Started</string>
+    <string name="lets_started">Let\'s get started</string>
+    <string name="lets_started_desc">Never a better time than now to start  thinking about how you manage  all your events with ease.</string>
+    <string name="create_acc">Create Account</string>
+    <string name="login">Login</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="host">Host</string>
+    <string name="create_event">Create Event</string>
+    <string name="post_events">Post Events</string>
+    <string name="past_events">Past Events</string>
+    <string name="rsvp">RSVP / Guest List</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="username_email">Email</string>
+    <string name="enter_name_mail">Enter username or email</string>
+    <string name="password">Password</string>
+    <string name="enter_pwd">Enter password</string>
+    <string name="forgot_pwd">Forgot Password</string>
+    <string name="mail_err">Please enter valid email</string>
+    <string name="enter_pwd_err">Enter password please</string>
+    <string name="register">Register</string>
+    <string name="venue">Venue</string>
+    <string name="promoter">Promoter</string>
+    <string name="forgot_sub_desc">Please enter email address to request a password reset.</string>
+    <string name="email">Email</string>
+    <string name="enter_mail">Enter your email</string>
+    <string name="reset_pwd">Reset Password</string>
+    <string name="reset_pwd_desc">Please enter your new password for your account.</string>
+    <string name="new_pwd">New Password</string>
+    <string name="conf_new_pwd">Confirm new password</string>
+    <string name="varificatio_in_progress">verification in process</string>
+    <string name="varification_subtitle">Thanks For Registration. Your Account  is being and we\'ll get back to you  with in 24-48 hours.</string>
+    <string name="navigate_txt">Navigate</string>
+
+    <string name="sms_verfication">SMS Verification</string>
+    <string name="sms_verfication_desc">Enter your mobile number, we will send you code to verify.</string>
+    <string name="enter_mob">Enter mobile</string>
+    <string name="invalid_mob">please enter valid mobile number</string>
+    <string name="verifiy_code">Verify Code</string>
+    <string name="verify_desc">Enter 4 digit code that sent to your Email Address</string>
+    <string name="verify_desc_phone">Enter 4 digit code sent to your phone</string>
+    <string name="verify">Verify</string>
+    <string name="txt_resend_otp">Resend OTP in</string>
+    <string name="txt_resend_otp_now">Resend OTP now</string>
+    <string name="signup">Sign Up</string>
+    <string name="fullname">Full Name</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="continue_txt">Continue</string>
+    <string name="skip">Skip*</string>
+    <string name="skip_">Skip</string>
+    <string name="skip_desc">*You will be required to complete sms verification later when you start booking with 365Live</string>
+    <string name="register_as_venue">Register as Venue</string>
+    <string name="venue_name">Venue Name</string>
+    <string name="addrs">Address</string>
+    <string name="venue_address">Venue Address</string>
+    <string name="website_url">Website URL</string>
+    <string name="availability">Availability</string>
+    <string name="guest_can_contact">Guest can contact you via</string>
+    <string name="in_app_only">In App Only</string>
+    <string name="allow_guest">Allow Guest to contact you ?</string>
+    <string name="upload_vanue_pic">Upload Logo / Picture of the Venue</string>
+    <string name="check_network">Check your connection</string>
+    <string name="try_again">Something went wrong!</string>
+    <string name="enter_valid_mail">enter valid email id please</string>
+    <string name="mail_mandatory">Email is mandatory!</string>
+    <string name="something_went_wrong">Some thing went wrong!</string>
+    <string name="settings">Settings</string>
+    <string name="manager_user">Manage Users</string>
+    <string name="acc_settings">Accounts Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="help">Help</string>
+    <string name="connect_social_acc">Connect Social Accounts</string>
+    <string name="share">Share</string>
+    <string name="term_and_cond"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="logout">Logout</string>
+    <string name="select_event_type">Select Event Type</string>
+    <string name="open_event">Open Event</string>
+    <string name="private_event">Private Event</string>
+    <string name="select_event_cat">Select Event Category</string>
+    <string name="event_cat">Event Category</string>
+    <string name="align_photo">Align Photo</string>
+    <string name="select_sub_cat">Select Sub Category</string>
+    <string name="next">Next</string>
+    <string name="create_an_event">Create an Event</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="txt_delete_event">Delete Event</string>
+    <string name="name_of_event">Name of Event</string>
+
+    <string name="select_days">Select Day</string>
+    <string name="select_months">Select Dates</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="enter_location_venue">Enter Location Venue</string>
+    <string name="gallery_img">Gallery Image</string>
+    <string name="additional_info">Additional Info</string>
+    <string name="enter_additional_info">Provide additional info like dress code etc.</string>
+    <string name="allow_guest_to_invite">Allow guest to invite</string>
+    <string name="paid_event">Paid Event?</string>
+    <string name="free">Free</string>
+    <string name="paid">Paid</string>
+    <string name="both">Both</string>
+    <string name="create_ticket">Create Ticket</string>
+    <string name="post_event">Post Event</string>
+    <string name="availability_error">Please choose hours of operation</string>
+
+    <string-array name="event_array">
+        <item>One Time</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <string-array name="paid_array">
+        <item>Paid RSVP Tickets</item>
+        <item>VIP RSVP Tickets</item>
+    </string-array>
+
+    <string-array name="free_array">
+        <item>Free RSVP Tickets</item>
+    </string-array>
+
+    <string-array name="both_array">
+        <item>Free RSVP Tickets</item>
+        <item>Paid RSVP Tickets</item>
+        <item>VIP RSVP Tickets</item>
+
+    </string-array>
+
+    <string name="title_activity_seating_and_pricing">SeatingAndPricing</string>
+    <string name="please_select_tickets">Please Select Tickets</string>
+    <string name="seating_and_prices"><![CDATA[Seatings & Prices]]></string>
+    <string name="add_another_ticket">Add Another Ticket</string>
+    <string name="ticket_name">Ticket Name</string>
+    <string name="enter_ticket_name">enter ticket name</string>
+    <string name="price_ticket">Price Ticket</string>
+    <string name="enter_price_ticket">enter price ticket</string>
+    <string name="total_ticket_qty">Total Tickets Quantity</string>
+    <string name="enter_qty">enter quantity</string>
+    <string name="table_and_seating">Table and Seatings</string>
+    <string name="enter_categoryname">Enter Category Name</string>
+    <string name="enter_category">enter category</string>
+    <string name="no_of_tables">No Of Tables</string>
+    <string name="person_per_table">Person Per Table</string>
+    <string name="price_per_table">Price Per Table</string>
+    <string name="total_seatings">Total Seatings</string>
+    <string name="enter_short_desc">Enter Short Description (Optional)</string>
+    <string name="enter_cancel_charges">Enter Cancellation Charges</string>
+    <string name="min_cancel_charges">( Minimum of 10% is Mandatory )</string>
+
+    <string name="add_another_cat">Add Another Category</string>
+    <string name="ticket_selling_start">Ticket Selling Starts</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="venue_locations">Venue / Locations</string>
+    <string name="profile">Profile</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="name">Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="url">URL</string>
+    <string name="short_info">Short Info</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="youtube">Youtube</string>
+    <string name="update">Update</string>
+    <string name="add_new_venue">Add New Venue</string>
+    <string name="my_venues">My Venues</string>
+    <string name="events">Events</string>
+    <string name="search">Search...</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="event_start">Event Start</string>
+    <string name="share_event">Share Event</string>
+    <string name="add_to">Add to</string>
+    <string name="tags">Tags</string>
+    <string name="description">Description</string>
+    <string name="map">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="gallery">Gallery</string>
+    <string name="add_a_review">Add a Review</string>
+    <string name="reviews">Reviews</string>
+    <string name="see_more">See More</string>
+    <string name="related_events">Related Events</string>
+    <string name="interested_lets_do">Interested? Let\'s do it</string>
+    <string name="enter_venue_name">Please enter Venue name!</string>
+    <string name="addrs_error">Address is mandatory!</string>
+    <string name="short_desc_error">Please enter short description</string>
+    <string name="venue_capacity_error">Please enter venue capacity</string>
+    <string name="venue_capacity_zero_error">Venue capacity should be greater than 0</string>
+    <string name="sub_venue_capacity_error">Sub venue can\'t be greater tha Venue</string>
+    <string name="choose_contact_via">Please choose, Guest can contact you via</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_event_found">No Event Found</string>
+    <string name="something_went_wrong_with_req">Something went wrong with your request</string>
+    <string name="retry">Retry</string>
+    <string name="add_new_user">Add New User</string>
+    <string name="user">User</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_first_name">enter first name</string>
+    <string name="enter_lastname">enter last name</string>
+    <string name="email_id">Email ID</string>
+    <string name="enter_mail_id">enter mail id</string>
+    <string name="enter_phone">enter phone</string>
+    <string name="this_acc_willbe_used_to">This account will be used to?</string>
+    <string name="create_and_list_event"><![CDATA[Create & List Events Only]]></string>
+    <string name="managin_booking"><![CDATA[Managing Booking & Payments]]></string>
+    <string name="save">Save</string>
+    <string name="password_err">Password must be minimum 6 character long</string>
+    <string name="alert">Alert!</string>
+    <string name="alert_">Alert</string>
+    <string name="really_want_delete">Do you really want to delete?</string>
+    <string name="session_expired">Your session has been expired! Please login again.</string>
+    <string name="title_activity_edit_event_details">EditEventDetails</string>
+    <string name="total_rsvp">Total RSVP</string>
+    <string name="checked_in_rsvp">Checked-In RSVP</string>
+    <string name="total_payment">Total Payment</string>
+    <string name="view_all_rsvp">View All RSVPs</string>
+    <string name="view_check_in_rsvp">View Checked-In RSVP</string>
+    <string name="edit_event_details">Edit Event Details</string>
+    <string name="view_payments">View All Payments</string>
+    <string name="send_rsvp_invites">Send RSVP Invites</string>
+    <string name="enter_availability">Enter Availability</string>
+    <string name="not_checkedin_rsvp">Not Checked-In RSVP</string>
+    <string name="venue_detail">Venue Detail</string>
+    <string name="sitting_capacity">Sitting Capacity</string>
+    <string name="vip_table">VIP Table</string>
+    <string name="regular_sitting">Regular Sitting</string>
+    <string name="uploaded_venue_pic">Uploaded Logo / Picture of the Venue</string>
+    <string name="manage">Manage</string>
+    <string name="really_want_logout">Do you really want to logout?</string>
+    <string name="txt_delete_event_msg">Are you sure want to delete event?</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="Zip">Zip</string>
+    <string name="event_end">Event End</string>
+    <string name="venue_images">Venue Images</string>
+    <string name="event_full_detail">Event Full Detail</string>
+    <string name="venue_addrs">Venue Address</string>
+    <string name="submit_ticket">Submit Ticket</string>
+    <string name="all_rsvp">All RSVPs</string>
+    <string name="invite_contacts">Invite Contacts</string>
+    <string name="all_contacts">All Contacts</string>
+    <string name="ticket_no">2 VIP Tickets - $1,140</string>
+    <string name="price">$1140</string>
+    <string name="account">Account</string>
+    <string name="account_no">9214**********655</string>
+    <string name="resend_ticket">Resend Ticket</string>
+    <string name="cancel">Cancel</string>
+    <string name="billing_add">Billing Address</string>
+    <string name="txt_scan_qr">Scan</string>
+    <string name="txt_scan_qr_msg">Your barcode here</string>
+
+
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="no_camera_permission_normal_warning">Camera permission is mandatory for taking picture.</string>
+    <string name="no_camera_permission_setting_warning">Camera permission is mandatory for taking picture. Please allow permissions from setting.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Barcode Reader Sample</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <string name="member">Member</string>
+    <string name="member_checked_title">The default permission for the member is Checked-IN</string>
+    <string name="pull_to_refresh">Pull down to refresh</string>
+    <string name="send_message">Send Message</string>
+    <string name="choose_country">Select Country</string>
+    <string name="select_city">Select City</string>
+    <string name="reset">Reset</string>
+    <string name="all_payments">All Payments</string>
+    <string name="venue_deleted">Venue Deleted</string>
+    <string name="price_per_ticket">Price Per Ticket</string>
+    <string name="submit_event">Submit Event</string>
+    <string name="ticket_info">Write Ticket Info</string>
+    <string name="update_phone">Update Phone</string>
+    <string name="invite">Invite</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="send">Send</string>
+    <string name="select_issue">Select issue</string>
+    <string name="message">Message</string>
+    <string name="type_your_msg">Type your message here</string>
+    <string name="ticket_cancel_msg">Do you really want to cancel ticket?</string>
+    <string name="how_often">How often is this event?</string>
+    <string name="short_desc">Short Description</string>
+    <string name="enter_event_detail">Enter event detail</string>
+
+    <string name="invalidPasswordCount">Password should be at least 8 characters long.</string>
+    <string name="passwordRequired">Password is required.</string>
+    <string name="error_password_number">Password must have at least 1 character and 1 number</string>
+    <string name="invalidEmail">Please enter a valid email address.</string>
+    <string name="invalidPhoneNumber">Please enter a valid mobile number</string>
+
+    <string name="emailRequired">An email address is required.</string>
+    <string name="nameIsRequired">Name is required.</string>
+    <string name="sessionTimeOutMessage">You may have logged in from other device, please login again!</string>
+    <string name="commonUnknowError">Something went wrong with your request, We’re working on it </string>
+
+    <!--Event Strings-->
+    <string name="subCategoryLimitErr">You can select up to 5 Sub Categories maximum</string>
+    <string name="enter_name_of_event">Event name is required!</string>
+    <string name="eventStartDateRequired">Event start date is required!</string>
+    <string name="eventEndDateRequired">Event end date is required!</string>
+    <string name="eventStartTimeRequired">Event start time is required!</string>
+    <string name="eventEndTimeRequired">Event end time is required!</string>
+    <string name="event_details">Event Details</string>
+    <string name="primary_event_msg">(First uploaded image wll be set on the background of ticket and the event)</string>
+    <string name="imp_info_add_on">Important information / Add-ons</string>
+    <string name="minimumTicket">Please create or add a ticket type for sale !</string>
+
+    <string name="shortDescMax">Short description cannot be max of 2500 character long.</string>
+    <string name="shortDescMax2">Short description cannot be max of 200 character long.</string>
+    <string name="shortDescMin">Short description have to be atleast of 200 character long.</string>
+    <string name="eventDetailMin">Event details have to be atleast of 200 character long.</string>
+    <string name="eventDetailMax">Event details cannot be max of 2500 character long.</string>
+    <string name="addOnMin">Important Information/ Add-ons have to be atleast of 200 character long.</string>
+    <string name="addOnMax">Important Information/ Add-ons cannot be max of 250 character long.</string>
+    <string name="galleryImageRequired">Please add at least one image for your event.</string>
+    <string name="venueNoAvailabilty">You have to select at least a venue.</string>
+    <string name="venueNameRequired">A Venue name is required!</string>
+    <string name="venueLocationRequired">Please select a Venue location to Host your event !</string>
+    <string name="ticketDescOrPhone">Please create event ticket sales or select a different type of event Posting to complete this listing.</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="edit_ticket">Edit Ticket</string>
+    <string name="update_event">Update</string>
+    <string name="select_venue_add">Please select vanue address</string>
+    <string name="event_name">Please enter event name</string>
+    <string name="get_paid">Get Paid</string>
+    <string name="no_internet_connection">No internet connnection !</string>
+    <string name="no_internet_desc">Your internet connection is down. please fix it and then you can continue using.</string>
+    <string name="link_account_msg">To add a bank account, you must have to link your event365 host account with stripe.</string>
+    <string name="select_selling_date">Selling start date is required!</string>
+    <string name="selling_end_date">Selling end date is required!</string>
+    <string name="selling_start_time">Selling start time is required!</string>
+    <string name="selling_end_time">Selling end time is required!</string>
+    <string name="no_notification">No Notifications</string>
+
+    <string name="minimum_payment_msg">Minimum payment of AMOUNT is required for posting an event.</string>
+    <string name="total_price">Total Price</string>
+    <string name="vip_ticket">VIP Ticket</string>
+    <string name="proceed">Proceed</string>
+    <string name="payment_method">Payment Method</string>
+
+    <string name="pay_now">Pay Now</string>
+    <string name="stripe">Stripe</string>
+    <string name="paypal">PayPal</string>
+    <string name="add_new_card">Add new card</string>
+
+
+    <string name="choosing_this_option">Choosing this option will not create any tickets to be
+purchased for your event, please use the contact
+fields below to direct users or connect user for further
+information concerning your event. Since no tickets will
+be created, you might be responsible for a listing fees
+in order to post and share this event using our platform.</string>
+
+    <string name="auto_fill_from_previous_data">Auto fill from previous data</string>
+    <string name="txt_enter_website_link">Enter website link</string>
+
+    <string name="enter_contact_details">Enter Contact Details</string>
+
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_your_address">Enter Your Email Address</string>
+    <string name="enter_website_url">Enter Website URL ( Optional )</string>
+    <string name="enter_website_url_m">Enter Website URL</string>
+
+
+    <string name="regular">Regular</string>
+    <string name="rsvp_vip">RSVP / VIP</string>
+    <string name="vip">VIP</string>
+    <string name="rsvp_">RSVP</string>
+    <string name="table_and_seatings">Table &amp; Seatings</string>
+    <string name="ticket_type">Ticket Type</string>
+
+    <string name="enter_cancellation_charges">Enter Cancellation Charges(%)</string>
+    <string name="minimum_of_10_percent">( Minimum of 10% is Mandatory )</string>
+    <string name="login_attempts_msg">Your account has been restricted. Please send us a message to resolve this issue.</string>
+    <string name="facebook_app_id">321338192650660</string>
+    <string name="fb_login_protocol_scheme">fb321338192650660</string>
+    <string name="event_note">For Events hosting and listing,\nPlease download 365 Live host or\ngo to www.365live.com</string>
+
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="type_of_venue">Type of Venue</string>
+    <string name="hours_of_operation">Hours of Operation</string>
+    <string name="indoor_venue">Indoor Venue</string>
+    <string name="outdoor_venue">Outdoor Venue</string>
+    <string name="venue_capacity">Venue Capacity</string>
+    <string name="venue_capacity_optional">Venue Capacity</string>
+    <string name="venue_available_to_other_host">Make this venue available to other hosts?</string>
+    <string name="add_more">Add More</string>
+    <string name="sub_venue_optional_msg">If your primary venue has multiple sub-venues/rooms/lawns/halls/screens/etc. Use this option to create those and specify the sub - venue capacity.</string>
+    <string name="edit_ticket_msg">Tickets can no longer be edited once a purchase is already made and all the tickets have to be returned before you can edit the tickets</string>
+    <string name="search_venue">search Near by venue..</string>
+    <string name="previously_used">Previously used</string>
+    <string name="select">Select</string>
+    <string name="available_sub_venue_msg"><font fgcolor='#ff2414'>*</font>
+    Your selected Venue/sub-venue will be locked
+    for 20 min. complete your event creation process
+    to confirm this venue for your upcoming event
+    </string>
+    <string name="process">Process</string>
+    <string name="ok">OK</string>
+    <string name="no_sub_venue">No available sub venue for now.
+Try again later.</string>
+    <string name="donot_have_account">Don\'t have a account?</string>
+    <string name="enable_gps_alert">Application needs to be enable the GPS</string>
+
+    <string name="txt_pass_length">Password should be at least 8 characters long.</string>
+    <string name="txt_pass_validation">Password must have at least 1 character and 1 number.</string>
+
+    <string name="txt_newpass_length">New password should be at least 8 characters long.</string>
+    <string name="txt_newpass_validation">New password must have at least 1 character and 1 number.</string>
+    <string name="txt_conpass_length">Confirm password should be at least 8 characters long.</string>
+    <string name="txt_conpass_validation">Confirm password must have at least 1 character and 1 number.</string>
+    <string name="pwd_not_matched">New &amp; Confirm password doesn\'t match!</string>
+    <string name="confirm">Confirm</string>
+    <string name="current_location">Current Location</string>
+    <string name="contact_warning_message">365Live Partner will read your contact details and send event name and URL as an invitation. We are not storing any contact information in server.</string>
+    <string name="agree">Agree</string>
+
+    <string name="add_discount">Add Discount</string>
+    <string name="add_discount_in">Add Discount in %</string>
+    <string name="discount_default">0%</string>
+    <string name="discount_added_lable">(Discount Added : %s</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="date_filter">Date Filter</string>
+    <string name="account_link">Account Link</string>
+    <string name="msg_no_user">You don\'t have any user under you.\n create one now.</string>
+    <string name="msg_error_no_venue">Oops! You don\'t have any venue.\n create now.</string>
+    <string name="enter_name_of_venue">Enter Name of Venue</string>
+    <string name="enter_venue_address">Enter Venue Address</string>
+    <string name="enter_short_description">Enter Short Description</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="all_day">All Day</string>
+    <string name="add_sub_venue_optional">Add Sub-Venue (optional)</string>
+    <string name="phone_call">Phone Call</string>
+    <string name="enter_venue_name_">Enter Venue Name</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="distance">Distance</string>
+    <string name="_5_miles">5 Miles</string>
+    <string name="zero">0</string>
+    <string name="_100_m">100 M</string>
+    <string name="apply">Apply</string>
+    <string name="oops_you_don_t_have_any_venue">Oops! You don\'t have any venue.</string>
+    <string name="crow_complex">Crow complex</string>
+    <string name="_1000">1000</string>
+    <string name="venue_type">Venue type</string>
+    <string name="total_venue_capacity">Total Venue Capacity</string>
+    <string name="address">Address</string>
+    <string name="website">Website</string>
+    <string name="na">NA</string>
+    <string name="this_venue_has_no_sub_venue">This venue has no sub - venue!</string>
+    <string name="show_name">Show Name</string>
+    <string name="contact">Contact</string>
+    <string name="repeat_bank_account_number">Repeat Bank Account Number</string>
+    <string name="confirm_account_number">Confirm Account Number</string>
+    <string name="payment_request_nsubmitted">Payment Request\nSubmitted</string>
+    <string name="msg_request_submitted">Your request has been submitted\nand you will be notified once\ncompleted</string>
+    <string name="back_to_home">Back To Home</string>
+    <string name="go_to_transaction_history">Go To Transaction History</string>
+    <string name="hosted_by">Hosted By</string>
+    <string name="filter_by_event">Filter by Event</string>
+    <string name="filter_by_date">Filter by Date</string>
+    <string name="check_in_via_ticket">Check - in via ticket</string>
+    <string name="enter_the_ticket_number">Enter the ticket number</string>
+    <string name="enter_ticket_number">Enter Ticket Number</string>
+    <string name="no">No</string>
+    <string name="submit">Submit</string>
+    <string name="is_it_free_event">Is it free event?</string>
+    <string name="yes">Yes</string>
+    <string name="available_sub_venue">Available sub - venue</string>
+    <string name="add_new_account">Add New Account</string>
+    <string name="please_enter_account_details">Please enter account details</string>
+    <string name="routing_no">Routing No.</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="add_account">Add Account</string>
+    <string name="choose_card">Choose Card</string>
+    <string name="add_new">Add New</string>
+    <string name="please_choose_any_card">Please choose any card</string>
+    <string name="link_account">Link Account</string>
+    <string name="dollar_symbol">$</string>
+    <string name="double_zero">00</string>
+    <string name="available_balance">Available balance</string>
+    <string name="withdraw_now">Withdraw Now</string>
+</resources>

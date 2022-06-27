@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/topLayout"
+    tools:context=".activity.BarCodeScanner">
+
+    <com.ebabu.event365live.host.barcode.ui.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ebabu.event365live.host.barcode.ui.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.ebabu.event365live.host.barcode.ui.CameraSourcePreview>
+
+    <com.ebabu.event365live.host.barcode.ui.ScannerOverlay
+        android:id="@+id/scan_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteLight"
+            android:textSize="@dimen/_15ssp"
+            android:text="@string/txt_scan_qr"
+            android:fontFamily="@font/helvetica_medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/txt_scan_qr_msg"
+            android:fontFamily="@font/helvetica"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/imvTorchOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/torch_off"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/imvTorchOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/torch_on"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/no_internet_layout"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <include layout="@layout/layout_no_interne"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

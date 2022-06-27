@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSubVenue"
+            style="@style/authSubTitle14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/labelBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_delete" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etSubVenueName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/helvetica"
+        android:hint="Enter name of Sub - Venue"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/grayLight"
+        android:textSize="@dimen/_12ssp" />
+
+
+    <EditText
+        android:id="@+id/etSubVenueCapacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/helvetica"
+        android:hint="Enter capacity of Sub - Venue"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@color/grayLight"
+        android:textSize="@dimen/_12ssp" />
+
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+package com.ebabu.event365live.host.api;
+
+import com.ebabu.event365live.host.BuildConfig;
+
+public class API {
+
+    public static final int SESSION_EXPIRE = 401;
+
+    public static final String MESSAGE = "message";
+    public static final String DATA = "data";
+    public static final String AUTHORIZATION = "Authorization";
+
+    public static final String BASE_URL = BuildConfig.BASE_URL;
+    public static final String ROUTING_NO_BASE_URL = "https://www.routingnumbers.info/";
+
+    // API name
+    static final String USER_LOGOUT = "logout";
+    static final String INVITE_RSVP = "inviteUser";
+    public static final String GET_EDIT_EVENT_DETAILS = "getEventDetails";
+    public static final String LOGIN = "login";
+    public static final String HOME = "home";
+    public static final String SOCIAL_LOGIN = "socialLogin";
+    public static final String UPDATE_SOCIAL_LOGIN_DATA = "updateSocialLoginData";
+    public static final String SIGNUP = "signup";
+    public static final String FORGOT_PASSWORD = "forgot";
+    public static final String RESET_PASSWORD = "resetPassword";
+    public static final String VERIFY_OTP = "verify";
+    public static final String VERIFY_PHONE = "verifyPhone";
+    public static final String SEND_PHONE_OTP = "sendPhoneOTP";
+    public static final String PHONE_NO = "phoneNo";
+    public static final String GET_PROFILE = "profileDetail";
+    public static final String UPDATE_PROFILE = "updateProfile";
+    public static final String COUNTRY = "country_code";
+    public static final String CURRENCY_CODE = "currencyCode";
+    public static final String SOCIAL_USER_ID = "socailUserId";
+    public static final String LOGIN_TYPE = "loginType";
+    public static final String RESEND_OTP_EMAIL = "againResedOTP";
+    public static final String ADD_BANK_DETAILS = "bankDetails";
+    public static final String GET_BANK_LIST = "bankDetails";
+    public static final String WITHDRAW_REQUEST = "withdrawnReq";
+    public static final String GET_ROUTING_NO = "api/data.json";
+    public static final String TRANSACTION_HISTORY = "transactionHistory";
+    public static final String BALANCE_INFO = "balanceInfo";
+    public static final String WITHDRAW_INFO = "withdrawnInfo";
+    public static final String ACCOUNT_LINK = "accountLink";
+    public static final String NOTIFICATION_COUNT = "countHostNotifications";
+    public static final String PREVIOUSLY_USED = "previouslyUsed";
+    public static final String LOCK_SUB_VENUE = "lockVenueSubVenue";
+    public static final String SUB_VENUE_DETAIL = "subvenueDetail";
+    public static final String PAID_EVENT_PAYMENT_DONE = "paidEventPaymentDone";
+
+    // API input parameter
+    public static final String NAME = "name";
+    public static final String EMAIL = "email";
+    public static final String PASSWORD = "password";
+    public static final String USER_TYPE = "userType";
+    public static final String VERIFY_MAIL = "verifyEmail";
+    public static final String VERIFY_RESET_PASSWORD = "verifyResetPW";
+    public static final String USER_NAME = "userName";
+    public static final String OTP = "otp";
+    public static final String NEW_PASSWORD = "newPassword";
+    public static final String ID = "id";
+    public static final String COUNTRY_CODE = "countryCode";
+    public static final String SUCCESS = "success";
+    public static final String CODE = "code";
+    public static final String AUTH_PREFIX = "Bearer ";
+    public static final String SESSION_ACTIVE = "session";
+    public static final String HOT_RELOAD = "hot_reload";
+    public static final String HOT_RELOAD_PROFILE = "hotReloadProfile";
+    public static final String HOT_RELOAD_EVENTS = "hotReloadEvents";
+    public static final String HOT_RELOAD_PAST_EVENTS = "hotReloadPastEvents";
+    public static final String DEVICE_TOKEN = "deviceToken";
+    public static final String DEVICE_TYPE = "deviceType";
+    public static final String NOTIFICATION_CLOSED = "notification_closed";
+    public static final String FIREBASE_TOKEN = "firebase_token";
+    public static final String DEVICE_ID = "DEVICE_ID";
+    public static final String SOURCE_IP = "SOURCE_IP";
+    public static final String EVENT_AVAILABILITY = "eventIsAvailability";
+    public static final String CANCEL_TICKET = "ticketCancelled";
+    public static final String PROFILE_PIC = "profile_pic";
+    public static final String IS_CREATE_EVENT = "is_create_event";
+    public static final String CHECK_IN = "checkIn";
+    public static final String CONTACT_ACCESS_GRANTED = "contact access permsision";
+    public static final String FETCH_NOTIFICATIONS = "getAllNotification";
+    static final String ADD_VENUE = "createVenue";
+    public static final String GET_VENEUS = "venues";
+    public static final String MY_VENEUS = "myVenues";
+    public static final String USER_VENEUS = "usersVenues";
+    static final String GET_EVENTS = "events";
+    public static final String UPCOMING_EVENTS = "upcomingEvent";
+    public static final String PAST_EVENTS = "pastEvent";
+    static final String USERS = "users";
+    static final String USER = "user";
+    static final String ADD_USER = "addUser";
+    public static final String FIRST_NAME = "firstName";
+    public static final String LAST_NAME = "lastName";
+    public static final String ROLES = "roles";
+    static final String GET_CATEGORIES = "getCategories";
+    static final String SUB_CATEGORIES = "getSubCategories";
+    static final String VENUE = "venue";
+    static final String GET_MORE_EVENT_DETAIL = "getMoreEventDetail";
+    public static final String IS_MANAGE_USER = "isManageUser";
+    public static final String IS_UNDER_VENUE = "isUnderVenue";
+    public static final String IS_VENUE_OWNER = "isVenueOwner";
+    static final String VENUE_IMAGES = "venueimages";
+    static final String CREATE_EVENT = "event";
+    static final String POST_EVENT = "postEvent";
+    static final String HOST_DETAIL = "hostDetail";
+    public static final String USER_ID = "user_id";
+    static final String GET_EVENT_DATES = "getEventsDates";
+    static final String GET_EVENTS_BY_DATE = "getEventDateDetails";
+    static final String GET_USER_BY_VANUER = "getUserByVenuer";
+    static final String FETCH_CHECKED_IN_USER = "fetchCheckedInUser";
+    static final String ALL_RSVP_SEARCH = "allRSVP";
+    static final String FETCH_ALL_PAYMENTS = "getUsersPayments";
+    static final String GET_CUSTOMER_USER = "getUser";
+    static final String FETCH_CUSTOMERS = "getSendRSVP";
+    static final String USER_PAYMENT_DETAIL = "userPaymentDetails";
+    static final String EDIT_EVENT = "editEvent";
+    static final String GET_EVENT_TICKETS = "getEventTicket/{id}";
+    static final String UPDATE_EVENT_TICKETS = "editEventTicket/{id}";
+    static final String GET_EPHEMERAL_KEY = "GetEphemeralKey";
+    static final String PAID_EVENT_PRICE = "paidEventPrice";
+    static final String GET_CLIENT_SECRET = "getClientSecret";
+    static final String CONTACT_LIST_ATTENDEES = "contactListAttendees";
+}
