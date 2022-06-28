@@ -5,7 +5,7 @@ android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.ebabu.event365live.host"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 11
         versionName "9.0.2"

@@ -49,6 +49,8 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
@@ -60,7 +62,9 @@ import com.bumptech.glide.RequestManager;
 import com.ebabu.event365live.host.DI.App;
 import com.ebabu.event365live.host.R;
 import com.ebabu.event365live.host.activity.CheckedInRSVP;
+import com.ebabu.event365live.host.activity.EditEventDetails;
 import com.ebabu.event365live.host.activity.MyVenues;
+import com.ebabu.event365live.host.activity.ViewAllRSVPActivity;
 import com.ebabu.event365live.host.adapter.GalleryPicAdapter;
 import com.ebabu.event365live.host.adapter.VenuePicInEventAdapter;
 import com.ebabu.event365live.host.api.API;
@@ -226,11 +230,13 @@ public class CreateEventFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.N)
     @SuppressLint("FragmentLiveDataObserve")
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_create_event, container, false);
         viewModel = ViewModelProviders.of(this).get(CreateEventViewModel.class);
         selectweekDay = new boolean[weekdayArray.length];
-        binding.typeSubSpinner.setOnClickListener(new View.OnClickListener() {
+        binding.typeSubSpinner.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -704,7 +710,6 @@ public class CreateEventFragment extends Fragment {
                 timePickerDialog.show();
             }
         });
-
         App.getAppComponent().inject(this);
         mContext = container.getContext();
         disposable = new CompositeDisposable();
@@ -896,6 +901,33 @@ public class CreateEventFragment extends Fragment {
                                     });
                                     binding.monthChipGroup.addView(chip);
                                 }
+                                binding.monthChipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener()
+                                {
+                                    @Override
+                                    public void onCheckedChanged(ChipGroup chipGroup, int i)
+                                    {
+                                        Chip chip = chipGroup.findViewById(i);
+                                        if (chip != null){
+                                            String currentdate=getTodayDate;
+                                            String[] sarr = currentdate.split("/");
+                                            int date= Integer.parseInt(sarr[1]);
+                                            day = Integer.parseInt(chip.getText().toString());
+                                            month = Calendar.getInstance().get(Calendar.MONTH);
+                                            year = Calendar.getInstance().get(Calendar.YEAR);
+                                            if (day > date)
+                                            {
+                                                month = month + 1;
+                                            }
+                                            if (day <= date)
+                                            {
+                                                month = month + 2;
+                                            }
+                                            startDate = year + "-" + month + "-" + day;
+                                        }
+                                        //Toast.makeText(getApplicationContext(), "Chip is " + chip.getText().toString(), Toast.LENGTH_SHORT).show();
+                                        Log.e("OnCheckedChangeListener", "Called");
+                                    }
+                                });
                             }
                             eventOccuranceType = "monthly";
                             binding.monthChipGroup.setSingleSelection(true);
@@ -1158,8 +1190,6 @@ public class CreateEventFragment extends Fragment {
             {
                 if (!binding.typeSubSpinner.getText().toString().equals("Select Dates"))
                 {
-                    SharedPreferences sharedPreferences= activity.getSharedPreferences("demo",MODE_PRIVATE);
-                    SharedPreferences.Editor editor=sharedPreferences.edit();
                     String currentdate=getTodayDate;
                     String[] sarr = currentdate.split("/");
                     int date= Integer.parseInt(sarr[1]);
@@ -1175,8 +1205,10 @@ public class CreateEventFragment extends Fragment {
                         month = month + 2;
                     }
                     startDate = year + "-" + month + "-" + day;
-                    editor.putString("monthlydate",startDate);
-                    editor.apply();
+                    RegularTicketFragment fragment = new RegularTicketFragment();
+                    final Bundle bundle = new Bundle();
+                    bundle.putString("position", startDate);
+                    fragment.setArguments(bundle);
                     createEventDAO.setStartDate(startDate);
                     createEventDAO.setEndDate(startDate);
                 }
@@ -1288,7 +1320,12 @@ public class CreateEventFragment extends Fragment {
             SharedPreferences shrd = activity.getSharedPreferences("demo", MODE_PRIVATE);
             SharedPreferences.Editor editor = shrd.edit();
             editor.putString("str", msg);
+            editor.putString("monthlydate", startDate);
             editor.apply();
+            RegularTicketFragment regularTicketFragment=new RegularTicketFragment();
+            FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container,regularTicketFragment);
             if (validateAndSetData(V)) {
                 Navigation.findNavController(V).navigate(
                         CreateEventFragmentDirections.actionCreateEventFragmentToCreateTicketFragment().setEventDAO(createEventDAO));
@@ -1300,7 +1337,6 @@ public class CreateEventFragment extends Fragment {
                 confirmPaidFreeDialog(v);
             }
         });
-
         return binding.getRoot();
     }
 
@@ -1392,6 +1428,7 @@ public class CreateEventFragment extends Fragment {
                                     });
                                     binding.monthChipGroup.addView(chip1);
                                 }
+
                             }
                             eventOccuranceType = "monthly";
                             binding.monthChipGroup.setSingleSelection(true);
@@ -2375,8 +2412,8 @@ public class CreateEventFragment extends Fragment {
         }
         if (eventOccuranceType == "daily"||eventOccuranceType == "weekly")
         {
-            startDate = "20/10/2025";
-            endDate = "20/10/2025";
+            startDate = "2025-10-20";
+            endDate = "2025-10-20";
             createEventDAO.setStartDate(startDate);
             createEventDAO.setEndDate(endDate);
             value1=binding.typeSubSpinner.getText().toString();

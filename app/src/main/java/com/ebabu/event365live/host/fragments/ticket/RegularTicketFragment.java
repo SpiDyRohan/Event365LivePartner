@@ -81,11 +81,13 @@ public class RegularTicketFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        // First spinner
+
+           // First spinner
             ArrayList<String> dayList = new ArrayList<>();
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_regular_ticket, container, false);
             SharedPreferences shrd = context.getSharedPreferences("demo", MODE_PRIVATE);
             String value = shrd.getString("str", "Save a note and it will show up here");
+            String startDate = shrd.getString("monthlydate", "");
             if (value != null && !value.equals(""))
             {
                 String[] daysSplit = value.split(",");
@@ -120,8 +122,8 @@ public class RegularTicketFragment extends Fragment
                     if (eventtype1.contains("Daily")||eventtype1.contains("Weekly"))
                     {
                         clearFields();
-                        StartDate = "20/10/2025";
-                        EndDate = "20/10/2025";
+                        StartDate = "2025-10-20";
+                        EndDate = "2025-10-20";
                         if (text.contains("Monday"))
                         {
                             ticketsellingdays = 1;
@@ -267,7 +269,6 @@ public class RegularTicketFragment extends Fragment
                     }
                     if (eventtype1.contains("Monthly"))
                     {
-                        SharedPreferences sharedPreferences= getActivity().getSharedPreferences("demo", MODE_PRIVATE);
                         binding.monthlayout.setVisibility(View.VISIBLE);
                         binding.dayspinner.setVisibility(View.GONE);
                         binding.dayspinner2.setVisibility(View.GONE);
@@ -278,9 +279,10 @@ public class RegularTicketFragment extends Fragment
                         binding.endtimemonth1.setText(value_Monthet);
                         sellingStartTime=value_Monthst;
                         sellingEndTime=value_Monthet;
-                        StartDate=sharedPreferences.getString("monthlydate",null);
-                        createEventDAO.setStartDate(StartDate);
-                        createEventDAO.setEndDate(StartDate);
+                        createEventDAO.setStartDate(startDate);
+                        createEventDAO.setEndDate(startDate);
+//                        createEventDAO.setStartDate(StartDate);
+//                        createEventDAO.setEndDate(StartDate);
                     }
                 }
                 @Override

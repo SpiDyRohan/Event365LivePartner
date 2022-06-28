@@ -33,6 +33,7 @@ import com.ebabu.event365live.host.utils.Utility;
 import com.google.android.datatransport.Event;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
@@ -324,14 +325,17 @@ public class FullEventDetailFragment extends Fragment {
         RequestBody endDate = null;
         RequestBody sellingStartDate = null,sellingEndDate=null;
 
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
+        try
+        {
+            SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
             Date startDateUtil = sdf.parse(createEventDAO.getStartDate() + " " + createEventDAO.getStartTime());
             startDate = RequestBody.create(MediaType.parse("text/plain"), Utility.localFormatUTC(startDateUtil));
 
             Date endDateUtil = sdf.parse(createEventDAO.getEndDate() + " " + createEventDAO.getEndTime());
             endDate = RequestBody.create(MediaType.parse("text/plain"), Utility.localFormatUTC(endDateUtil));
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         RequestBody description = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getDesc());
@@ -615,10 +619,11 @@ public class FullEventDetailFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        Call<Event> call = apiInterface.postEventTicket(map,image);
-        call.enqueue(new Callback<Event>() {
+        Call<JsonElement> call = apiInterface.postEventTicket(map,image);
+        call.enqueue(new Callback<JsonElement>() {
             @Override
-            public void onResponse(Call<Event> call, Response<Event> response) {
+            public void onResponse(Call<JsonElement> call, Response<JsonElement> response)
+            {
                 loader.dismiss();
                 if (response.isSuccessful())
                 {
@@ -641,13 +646,15 @@ public class FullEventDetailFragment extends Fragment {
                             v1 -> getActivity().finish()
                     );
 
-                } else {
-                    Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!");
+                }
+                else
+                {
+                    Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!..");
                 }
             }
 
             @Override
-            public void onFailure(Call<Event> call, Throwable t) {
+            public void onFailure(Call<JsonElement> call, Throwable t) {
                 t.printStackTrace();
                 loader.dismiss();
                 Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!");

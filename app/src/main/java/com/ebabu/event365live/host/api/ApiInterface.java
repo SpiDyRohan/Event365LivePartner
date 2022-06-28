@@ -183,7 +183,7 @@ public interface ApiInterface {
 
             @Multipart
             @POST ("/api/organiser/postEvent")
-                    Call<Event> postEventTicket (
+                    Call<JsonElement> postEventTicket (
                             @PartMap Map<String, RequestBody> eventType,@Part MultipartBody.Part[] image);
                     Call<ResponseBody> upload(@Part RequestBody description,
                                              @Part RequestBody categoryId,
@@ -211,8 +211,7 @@ public interface ApiInterface {
                                              @Part RequestBody sellingStartDate,
                                              @Part RequestBody sellingEndDate,
                                              @Part RequestBody isEventPaid,
-                                             @Part RequestBody subVenue,
-                                             @Part MultipartBody.Part file);
+                                             @Part RequestBody subVenue);
 //@Multipart
 //@POST(API.POST_EVENT)
 //Call<JsonElement> postEventTicket(

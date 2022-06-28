@@ -31,6 +31,7 @@ import com.ebabu.event365live.host.utils.Utility;
 import com.google.android.datatransport.Event;
 import com.google.android.material.chip.Chip;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
@@ -548,32 +549,32 @@ public class CreateEventFullEvent extends Fragment {
 //            }
 //        }
 
-        Call<Event> call = apiInterface.postEventTicket(map,image);
-        call.enqueue(new Callback<Event>()
+        Call<JsonElement> call = apiInterface.postEventTicket(map,image);
+        call.enqueue(new Callback<JsonElement>()
         {
            @Override
-           public void onResponse(Call<Event> call, Response<Event> response)
+           public void onResponse(Call<JsonElement> call, Response<JsonElement> response)
            {
               loader.dismiss();
               if (response.isSuccessful())
               {
-                 String msg = "";
-                 try
-                 {
-                   msg = new JSONObject(response.body().toString()).getString("message");
-                 }
-                 catch (JSONException e)
-                 {
-                   e.printStackTrace();
-                 }
-                App.createEventDAO = null;
-                Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD, true);
-                Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD_EVENTS, true);
-                Dialogs.showActionDialog(getContext(),
-                getString(R.string.app_name),
-                msg,
-                "Done",
-                v1 -> getActivity().finish());
+                   String msg = "";
+                   try
+                   {
+                     msg = new JSONObject(response.body().toString()).getString("message");
+                   }
+                   catch (JSONException e)
+                   {
+                     e.printStackTrace();
+                   }
+                  App.createEventDAO = null;
+                  Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD, true);
+                  Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD_EVENTS, true);
+                  Dialogs.showActionDialog(getContext(),
+                  getString(R.string.app_name),
+                  msg,
+                  "Done",
+                  v1 -> getActivity().finish());
                 }
                     else
                     {
@@ -581,7 +582,7 @@ public class CreateEventFullEvent extends Fragment {
                     }
            }
            @Override
-           public void onFailure(Call<Event> call, Throwable t)
+           public void onFailure(Call<JsonElement> call, Throwable t)
            {
              t.printStackTrace();
              loader.dismiss();

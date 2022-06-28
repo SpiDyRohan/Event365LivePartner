@@ -13,8 +13,12 @@
         <entry key="app/src/main/res/layout/activity_update_event_detail.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/activity_update_ticket.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_venue_detail.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/confirm_add_dialog_layout.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/confirmation_withdraw_layout.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/content_edit_event_details.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/content_event_details.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/demo.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/frag_completed_payment.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_confirm_withdraw.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_create_event.xml" value="0.2367066895368782" />
         <entry key="app/src/main/res/layout/fragment_create_event_full_event.xml" value="0.25" />
@@ -32,6 +36,8 @@
         <entry key="app/src/main/res/layout/fragment_rsvp_vip_edit_tab.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_rsvp_vip_tab.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_table_seating_tab.xml" value="0.13385416666666666" />
+        <entry key="app/src/main/res/layout/intro1.xml" value="0.10625" />
+        <entry key="app/src/main/res/layout/layout_event.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/layout_pager_image.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/layout_payment_price.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/layout_post_event_dialog.xml" value="0.18177083333333333" />
@@ -44,6 +50,7 @@
         <entry key="app/src/main/res/layout/my_spinner_item.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/spinner_layout.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/ticket_detail_layout.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/withdraw_custom_layout.xml" value="0.21" />
       </map>
     </option>
   </component>
