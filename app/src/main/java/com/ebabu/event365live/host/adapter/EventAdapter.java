@@ -70,7 +70,12 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     .into(holder.img);
         }
 
-        if (type == EventType.PAST || type == EventType.HOME) {
+
+        if ( type == EventType.PAST) {
+            holder.deleteBtn.setVisibility(View.VISIBLE);
+            holder.editBtn.setVisibility(View.GONE);
+        }
+        if ( type == EventType.HOME) {
             holder.deleteBtn.setVisibility(View.GONE);
             holder.editBtn.setVisibility(View.GONE);
         }

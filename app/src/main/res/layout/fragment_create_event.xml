@@ -1389,7 +1389,7 @@
                                     android:layout_marginLeft="@dimen/_15sdp"
                                     android:fontFamily="@font/helvetica"
                                     android:inputType="time"
-                                    android:text="00:00"
+                                    android:text="@string/start_time"
                                     app:layout_constraintBottom_toBottomOf="@+id/start_time_img_week"
                                     app:layout_constraintStart_toEndOf="@+id/start_time_img_week"
                                     app:layout_constraintTop_toTopOf="@+id/start_time_img_week" />
@@ -1438,7 +1438,7 @@
                                     android:layout_marginLeft="@dimen/_15sdp"
                                     android:fontFamily="@font/helvetica"
                                     android:inputType="time"
-                                    android:text="00:00"
+                                    android:text="@string/end_time"
                                     app:layout_constraintBottom_toBottomOf="@+id/end_time_img_week"
                                     app:layout_constraintStart_toEndOf="@+id/end_time_img_week"
                                     app:layout_constraintTop_toTopOf="@+id/end_time_img_week" />

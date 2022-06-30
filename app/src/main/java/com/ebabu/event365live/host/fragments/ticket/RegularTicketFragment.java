@@ -122,8 +122,8 @@ public class RegularTicketFragment extends Fragment
                     if (eventtype1.contains("Daily")||eventtype1.contains("Weekly"))
                     {
                         clearFields();
-                        StartDate = "2025-10-20";
-                        EndDate = "2025-10-20";
+                        StartDate = "10/20/2025";
+                        EndDate = "10/20/2025";
                         if (text.contains("Monday"))
                         {
                             ticketsellingdays = 1;
@@ -355,12 +355,7 @@ public class RegularTicketFragment extends Fragment
             binding.daylinearlayout.setVisibility(View.GONE);
             binding.daylinearlayout2.setVisibility(View.GONE);
         }
-        if (eventtype1.contains("Daily"))
-        {
-            binding.daylinearlayout.setVisibility(View.VISIBLE);
-            binding.daylinearlayout2.setVisibility(View.VISIBLE);
-        }
-        if (eventtype1.contains("Weekly"))
+        if (eventtype1.contains("Daily")||eventtype1.contains("Weekly"))
         {
             binding.daylinearlayout.setVisibility(View.VISIBLE);
             binding.daylinearlayout2.setVisibility(View.VISIBLE);
@@ -467,7 +462,7 @@ public class RegularTicketFragment extends Fragment
                     ticketDao.setSellingStartDate(sellingStartDate);
                     ticketDao.setSellingEndDate(sellingEndDate);
                 }
-                if (evnttype.contains("Weekly"))
+                if (evnttype.contains("Daily")||evnttype.contains("Weekly"))
                 {
                     Date today = Calendar.getInstance().getTime();
                     SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
@@ -1210,11 +1205,10 @@ public class RegularTicketFragment extends Fragment
                     return false;
                 }
             }
-            if (evnttype.contains("Daily"))
+            if (evnttype.contains("Daily")||evnttype.contains("Weekly"))
             {
                 if (text.contains("Monday"))
                 {
-                    Toast.makeText(context, "Selling start time: "+sellingStartTime, Toast.LENGTH_SHORT).show();
                     if (sellingStartTime.equals(getString(R.string.start_time)))
                     {
                      Dialogs.toast(getContext(), v, "Select Start Time please!");

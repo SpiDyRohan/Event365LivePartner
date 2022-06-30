@@ -296,7 +296,8 @@ public class FullEventDetailFragment extends Fragment {
                 .build());
     }
 
-    private void CreateEventDetailsPostRequest() {
+    private void CreateEventDetailsPostRequest()
+    {
         loader.show("");
         RequestBody eventType = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(createEventDAO.getEventType()));
         RequestBody categoryId = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(createEventDAO.getCategoryId()));
@@ -325,9 +326,8 @@ public class FullEventDetailFragment extends Fragment {
         RequestBody endDate = null;
         RequestBody sellingStartDate = null,sellingEndDate=null;
 
-        try
-        {
-            SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd HH:mm a", Locale.ENGLISH);
             Date startDateUtil = sdf.parse(createEventDAO.getStartDate() + " " + createEventDAO.getStartTime());
             startDate = RequestBody.create(MediaType.parse("text/plain"), Utility.localFormatUTC(startDateUtil));
 
@@ -341,18 +341,10 @@ public class FullEventDetailFragment extends Fragment {
         RequestBody description = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getDesc());
         RequestBody description2 = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getDesc2());
         RequestBody paidType = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getPaidType());
-//        if (eventOccurrenceType.equals("oneTime")||eventOccurrenceType.equals("monthly"))
-//        {
+
             startDate = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getStartDate() + " " + createEventDAO.getStartTime());
             endDate = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getEndDate() + " " + createEventDAO.getEndTime());
-//        }
-//        if (eventOccurrenceType.equals("daily")||eventOccurrenceType.equals("weekly"))
-//        {
-//            startDate = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getStartDate() + " " + createEventDAO.getStartTime());
-//            endDate = RequestBody.create(MediaType.parse("text/plain"), createEventDAO.getEndDate() + " " + createEventDAO.getEndTime());
-//        }
         RequestBody ticketInfoURL = null, helpLine = null;
-//        RequestBody sellingStartDate = null, sellingEndDate = null;
         RequestBody willEventAvailableRequestBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(willEventAvailable));
 
 
@@ -373,7 +365,7 @@ public class FullEventDetailFragment extends Fragment {
 
         } else {
             try {
-                SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.ENGLISH);
+                SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd HH:mm a", Locale.ENGLISH);
                 if (!TextUtils.isEmpty(createEventDAO.getSellStartDate()) && !TextUtils.isEmpty(createEventDAO.getSellEndDate()))
                 {
                     Date startDateUtil = sdf.parse(createEventDAO.getSellingStartDate() + " " + createEventDAO.getSellStartTime());
@@ -615,12 +607,15 @@ public class FullEventDetailFragment extends Fragment {
                     MultipartBody.Part fileToUploadPart = MultipartBody.Part.createFormData("images", file.getName(), requestFile);
                     image[index] = fileToUploadPart;
                 }
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 e.printStackTrace();
             }
         }
         Call<JsonElement> call = apiInterface.postEventTicket(map,image);
-        call.enqueue(new Callback<JsonElement>() {
+        call.enqueue(new Callback<JsonElement>()
+        {
             @Override
             public void onResponse(Call<JsonElement> call, Response<JsonElement> response)
             {
@@ -652,7 +647,6 @@ public class FullEventDetailFragment extends Fragment {
                     Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!..");
                 }
             }
-
             @Override
             public void onFailure(Call<JsonElement> call, Throwable t) {
                 t.printStackTrace();
@@ -660,63 +654,6 @@ public class FullEventDetailFragment extends Fragment {
                 Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!");
             }
         });
-//        Call call = apiInterface.postEventTicket(
-//                eventType,
-//                categoryId,
-//                subCategoryId,
-//                name,
-//                eventOccurrenceType,
-//                eventOccuranceOn,
-//                startDate, endDate,
-//                venueId, veneuName, venueAddress,
-//                venueLat, venueLongt,
-//                countryCode,
-//                cityName,
-//                description,
-//                description2,
-//                paidType,
-//                vipTicketBody, tableSeatingBody, rsvpTicketBody, regularPaidBody, regularFreeJsonBody,
-//                ticketInfoURL, helpLine, sellingStartDate, sellingEndDate,
-//                isEventPaid,
-//                subVenue,
-//                image);
-//
-//        call.enqueue(new Callback() {
-//            @Override
-//            public void onResponse(@NonNull Call call, @NonNull Response response) {
-//                loader.dismiss();
-//                if (response.isSuccessful()) {
-//                    String msg = "";
-//                    try {
-//                        msg = new JSONObject(response.body().toString()).getString("message");
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                    App.createEventDAO = null;
-//
-//                    Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD, true);
-//                    Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD_EVENTS, true);
-//                    Dialogs.showActionDialog(getContext(),
-//                            getString(R.string.app_name),
-//                            msg,
-//                            "Done",
-//                            v1 -> getActivity().finish()
-//                    );
-//
-//                } else {
-//                    Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!");
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call call, Throwable t) {
-//                t.printStackTrace();
-//                loader.dismiss();
-//                Dialogs.toast(getContext(), binding.getRoot(), "Something went wrong!");
-//            }
-//        });
     }
 
     private void moveItem(int oldPos, int newPos) {

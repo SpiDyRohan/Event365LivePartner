@@ -13,6 +13,7 @@ import com.ebabu.event365live.host.DI.App;
 import com.ebabu.event365live.host.api.API;
 import com.ebabu.event365live.host.api.ApiInterface;
 import com.ebabu.event365live.host.entities.EventDAO;
+import com.ebabu.event365live.host.entities.MyResponse;
 import com.ebabu.event365live.host.repositories.EventRepository;
 import com.ebabu.event365live.host.utils.Utility;
 
@@ -22,7 +23,7 @@ import javax.inject.Inject;
 
 public class PastEventViewModel  extends AndroidViewModel {
 
-  //  private MutableLiveData<List<EventDAO>> upComingEvents;
+    //  private MutableLiveData<List<EventDAO>> upComingEvents;
     private EventRepository repository;
     private MutableLiveData<Boolean> _sessionExpired;
 
@@ -33,7 +34,8 @@ public class PastEventViewModel  extends AndroidViewModel {
     Context context;
 
     public PastEventViewModel(@NonNull Application application) {
-        super(application);
+        super(application)
+        ;
         App.getAppComponent().inject(this);
         repository=EventRepository.getInstance();
         _sessionExpired=repository.sessionExpired;
@@ -67,11 +69,17 @@ public class PastEventViewModel  extends AndroidViewModel {
         boolean hotReload=false;
 
         if(Utility.getSharedPreferencesBoolean(context,API.HOT_RELOAD_PAST_EVENTS)) {
-           // Utility.setSharedPreferencesBoolean(context,API.HOT_RELOAD_EVENTS,false);
+            // Utility.setSharedPreferencesBoolean(context,API.HOT_RELOAD_EVENTS,false);
             Log.d("fnalskfla", "getPastEvents: "+Utility.getSharedPreferencesBoolean(context,API.HOT_RELOAD_EVENTS));
             hotReload = true;
         }
         Log.d("fnalskfla", "out:getPastEvents "+Utility.getSharedPreferencesBoolean(context,API.HOT_RELOAD_EVENTS));
         return fetchData(hotReload);
     }
+
+    public LiveData<MyResponse> deleteEvent(int venueId){
+        return repository.deleteEvent(apiInterface,venueId);
+    }
+
+
 }

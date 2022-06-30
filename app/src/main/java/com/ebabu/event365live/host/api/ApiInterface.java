@@ -183,8 +183,7 @@ public interface ApiInterface {
 
             @Multipart
             @POST ("/api/organiser/postEvent")
-                    Call<JsonElement> postEventTicket (
-                            @PartMap Map<String, RequestBody> eventType,@Part MultipartBody.Part[] image);
+                    Call<JsonElement> postEventTicket ( @PartMap Map<String, RequestBody> eventType,@Part MultipartBody.Part[] image);
                     Call<ResponseBody> upload(@Part RequestBody description,
                                              @Part RequestBody categoryId,
                                              @Part RequestBody subCategoryId,

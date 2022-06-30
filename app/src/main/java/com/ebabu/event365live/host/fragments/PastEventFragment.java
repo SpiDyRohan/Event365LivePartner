@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.ebabu.event365live.host.R;
 import com.ebabu.event365live.host.activity.EditEventDetails;
@@ -15,11 +16,13 @@ import com.ebabu.event365live.host.api.API;
 import com.ebabu.event365live.host.databinding.FragmentPastEventBinding;
 import com.ebabu.event365live.host.entities.EventDAO;
 import com.ebabu.event365live.host.entities.EventType;
+import com.ebabu.event365live.host.entities.MyResponse;
 import com.ebabu.event365live.host.events.CheckedInEvent;
 import com.ebabu.event365live.host.utils.Dialogs;
 import com.ebabu.event365live.host.utils.MyLoader;
 import com.ebabu.event365live.host.utils.Utility;
 import com.ebabu.event365live.host.viewmodels.PastEventViewModel;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -61,6 +64,32 @@ public class PastEventFragment extends Fragment {
                     e.printStackTrace();
                 }
             }
+
+            @Override
+            public void deleteEvent(int id) {
+                new MaterialAlertDialogBuilder(getContext())
+                        .setMessage(getString(R.string.really_want_delete))
+                        .setTitle(getString(R.string.alert))
+                        .setPositiveButton("Delete", (dialogInterface, i) -> {
+                            viewModel.deleteEvent(id).observe(PastEventFragment.this, new Observer<MyResponse>() {
+                                @Override
+                                public void onChanged(MyResponse myResponse) {
+                                    loader.dismiss();
+                                    if (myResponse.isSuccess()) {
+                                        Utility.setSharedPreferencesBoolean(getContext(), API.HOT_RELOAD, true);
+                                        Toast.makeText(getContext(), "Event is deleted successfully!", Toast.LENGTH_LONG).show();
+                                        list.remove(new EventDAO(id));
+                                        adapter.refresh(list);
+                                    } else {
+                                        Dialogs.toast(getContext(), binding.getRoot(), myResponse.getMessage());
+                                    }
+                                }
+                            });
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
+            }
+
 
         }, "");
         binding.rv.setLayoutManager(new LinearLayoutManager(getContext()));
