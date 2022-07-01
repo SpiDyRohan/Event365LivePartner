@@ -322,7 +322,10 @@ public class CreateEventFragment extends Fragment {
                         SharedPreferences.Editor editor = stcl1.edit();
                         editor.putString("monthst", stcl);
                         editor.apply();
-                        createEventDAO.setStartTime(time);
+                        if (!update)
+                        {
+                         createEventDAO.setStartTime(time);
+                        }
                     }
                 }, 12, 0, false
                 );
@@ -1691,6 +1694,55 @@ public class CreateEventFragment extends Fragment {
                 String value_monet = Month.getString("mondayet", null);
                 binding.startTimeTvMon.setText(value_monst);
                 binding.endTimeTv2Mon.setText(value_monet);
+                   start_time_tv_mon.setOnClickListener(new View.OnClickListener() {                                                                                                 // Start Monday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_mon.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_mon.setText(time);
+                                   startTime=time;
+
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_mon.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_mon.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_mon.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                            // End Monday
 //                binding.startTimeTvMon.setText(StringUtils.getTime(updateEventDao.getStart()));
 //                binding.endTimeTv2Mon.setText(StringUtils.getTime(updateEventDao.getEnd()));
                }
@@ -1703,6 +1755,54 @@ public class CreateEventFragment extends Fragment {
                 String value_tueset = Month.getString("tuesdayet", null);
                 binding.startTimeTvTues.setText(value_tuesst);
                 binding.endTimeTv2Tues.setText(value_tueset);
+                   start_time_tv_tues.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Tuesday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_tues.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_tues.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_tues.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_tues.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_tues.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                             //End Tuesday
                }
              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==3)
                {
@@ -1713,6 +1813,54 @@ public class CreateEventFragment extends Fragment {
                 String value_wedneset = Month.getString("wednesdayet", null);
                 binding.startTimeTvWednes.setText(value_wednesst);
                 binding.endTimeTv2Wednes.setText(value_wedneset);
+                   start_time_tv_wednes.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Wednesday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_wednes.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_wednes.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_wednes.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_wednes.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_wednes.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                             //End Wednesday
                }
              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==4)
                {
@@ -1723,6 +1871,54 @@ public class CreateEventFragment extends Fragment {
                 String value_thurset = Month.getString("thursdayet", null);
                 binding.startTimeTvThurs.setText(value_thursst);
                 binding.endTimeTv2Thurs.setText(value_thurset);
+                   start_time_tv_thurs.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Thursday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_thurs.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_thurs.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_thurs.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_thurs.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_thurs.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                             //End Thurssday
                }
              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==5)
                {
@@ -1733,6 +1929,54 @@ public class CreateEventFragment extends Fragment {
                 String value_friet = Month.getString("fridayet", null);
                 binding.startTimeTvFri.setText(value_frist);
                 binding.endTimeTv2Fri.setText(value_friet);
+                   start_time_tv_fri.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Friday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_fri.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_fri.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_fri.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_fri.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_fri.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                             //End Friday
                }
              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==6)
                {
@@ -1743,6 +1987,54 @@ public class CreateEventFragment extends Fragment {
                 String value_saturet = Month.getString("saturdayet", null);
                 binding.startTimeTvSatur.setText(value_saturst);
                 binding.endTimeTv2Satur.setText(value_saturet);
+                   start_time_tv_satur.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Saturday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_satur.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_satur.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_satur.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_satur.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_satur.setText(time);
+                                   endTime=time;
+                              }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });                                                                                             //End Saturday
                }
              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==7)
                {
@@ -1753,6 +2045,54 @@ public class CreateEventFragment extends Fragment {
                 String value_Sunet = Month.getString("sundayet", null);
                 binding.startTimeTvSun.setText(value_Sunst);
                 binding.endTimeTv2Sun.setText(value_Sunet);
+                   start_time_tv_sun.setOnClickListener(new View.OnClickListener() {                                                                                              // Start Sunday
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   start_time_tv_sun.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   start_time_tv_sun.setText(time);
+                                   startTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
+                   end_time_tv2_sun.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                               @Override
+                               public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                   t1Hour = i;
+                                   t1Minute = i1;
+                                   // Calender
+                                   Calendar calendar = Calendar.getInstance();
+                                   calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                   end_time_tv2_sun.setText(DateFormat.format("hh:mm aa", calendar));
+                                   String zone = t1Hour >= 12 ? "pm" : "am";
+                                   int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                   String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                   end_time_tv2_sun.setText(time);
+                                   endTime=time;
+                               }
+                           }, 12, 0, false
+                           );
+                           timePickerDialog.updateTime(t1Hour, t1Minute);
+                           timePickerDialog.show();
+                       }
+                   });
                }
             }
             if (occuranceType.equals("monthly"))
@@ -1764,11 +2104,60 @@ public class CreateEventFragment extends Fragment {
                 String value_Monthet = Month.getString("monthet", null);
                 binding.startTimeTvWeek.setText(value_Monthst);
                 binding.endTimeTv2Week.setText(value_Monthet);
+                start_time_tv_week.setOnClickListener(new View.OnClickListener() {                                                                                                       //Start week
+                    @Override
+                    public void onClick(View view) {
+                        TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                // Clock
+                                t1Hour = i;
+                                t1Minute = i1;
+                                // Calender
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                String zone = t1Hour >= 12 ? "pm" : "am";
+                                int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                start_time_tv_week.setText(time);
+                                startTime=time;
+                            }
+                        }, 12, 0, false
+                        );
+                        timePickerDialog.updateTime(t1Hour, t1Minute);
+                        timePickerDialog.show();
+                    }
+                });
+                end_time_tv2_week.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                t1Hour = i;
+                                t1Minute = i1;
+                                // Calender
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.set(0, 0, 0, t1Hour, t1Minute);
+                                end_time_tv2_week.setText(DateFormat.format("hh:mm aa", calendar));
+                                String zone = t1Hour >= 12 ? "pm" : "am";
+                                int hour = t1Hour > 12 ? t1Hour - 12 : t1Hour;
+                                String time = ((hour < 10) ? "0" + hour : hour) + ":" + ((t1Minute < 10) ? "0" + t1Minute : t1Minute) + " " + zone;
+                                end_time_tv2_week.setText(time);
+                                endTime=time;
+                            }
+                        }, 12, 0, false
+                        );
+                        timePickerDialog.updateTime(t1Hour, t1Minute);
+                        timePickerDialog.show();
+                    }
+                });                                                                                               //End Week
             }
             binding.typeSubSpinner.setOnClickListener(v ->
             {
                 if (eventOccuranceType.contains("monthly"))
                 {
+                    binding.typeSubSpinner.setText(getString(R.string.select));
                     if (!binding.typeSubSpinner.getText().toString().contains("Select"))
                     {
                         String currentdate=getTodayDate;
@@ -2313,6 +2702,49 @@ public class CreateEventFragment extends Fragment {
                 startTime = binding.startTimeTv.getText().toString();
                 endTime = binding.endTimeTv.getText().toString();
             }
+            if (eventOccuranceType.contains("daily")||eventOccuranceType.contains("weekly"))
+            {
+                if (binding.typeSubSpinner.getText().toString().contains("Monday"))
+                {
+                startTime = binding.startTimeTvMon.getText().toString();
+                endTime = binding.endTimeTv2Mon.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Tuesday"))
+                {
+                    startTime = binding.startTimeTvTues.getText().toString();
+                    endTime = binding.endTimeTv2Tues.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Wednesday"))
+                {
+                    startTime = binding.startTimeTvWednes.getText().toString();
+                    endTime = binding.endTimeTv2Wednes.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Thursday"))
+                {
+                    startTime = binding.startTimeTvThurs.getText().toString();
+                    endTime = binding.endTimeTv2Thurs.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Friday"))
+                {
+                    startTime = binding.startTimeTvFri.getText().toString();
+                    endTime = binding.endTimeTv2Fri.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Saturday"))
+                {
+                    startTime = binding.startTimeTvSatur.getText().toString();
+                    endTime = binding.endTimeTv2Satur.getText().toString();
+                }
+                if (binding.typeSubSpinner.getText().toString().contains("Sunday"))
+                {
+                    startTime = binding.startTimeTvSun.getText().toString();
+                    endTime = binding.endTimeTv2Sun.getText().toString();
+                }
+            }
+            if (eventOccuranceType.contains("monthly"))
+            {
+                startTime=binding.startTimeTvWeek.getText().toString();
+                endTime=binding.endTimeTv2Week.getText().toString();
+            }
 //            if (eventOccuranceType.contains("daily") || eventOccuranceType.contains("weekly"))
 //            {
 //                startDate = getTodayDate;
@@ -2408,19 +2840,8 @@ public class CreateEventFragment extends Fragment {
                 Dialogs.toast(mContext, v, getString(R.string.venueNameRequired));
                 binding.venueLocEt.requestFocus();
                 return;
-            } else if (startDate.equalsIgnoreCase(getString(R.string.start_date))) {
-                Dialogs.toast(mContext, v, getString(R.string.eventStartDateRequired));
-                return;
-            } else if (endDate.equalsIgnoreCase(getString(R.string.end_date))) {
-                Dialogs.toast(mContext, v, getString(R.string.eventEndDateRequired));
-                return;
-            } else if (startTime.equalsIgnoreCase(getString(R.string.start_time))) {
-                Dialogs.toast(mContext, v, getString(R.string.eventStartTimeRequired));
-                return;
-            } else if (endTime.equalsIgnoreCase(getString(R.string.end_time))) {
-                Dialogs.toast(mContext, v, getString(R.string.eventEndTimeRequired));
-                return;
-            } else if (imageDaoList.size() == 0 && previousImages.size() == 0) {
+            }
+            else if (imageDaoList.size() == 0 && previousImages.size() == 0) {
                 Dialogs.toast(mContext, v, getString(R.string.galleryImageRequired));
                 return;
             }
@@ -2434,6 +2855,56 @@ public class CreateEventFragment extends Fragment {
                 Dialogs.toast(mContext, v, getString(R.string.eventDetailMax));
                 return;
             }
+            if (eventOccuranceType.contains("oneTime"))
+            {
+             if (startDate.equalsIgnoreCase(getString(R.string.start_date)))
+             {
+                Dialogs.toast(mContext, v, getString(R.string.eventStartDateRequired));
+                return;
+             }
+             else if (endDate.equalsIgnoreCase(getString(R.string.end_date)))
+             {
+                Dialogs.toast(mContext, v, getString(R.string.eventEndDateRequired));
+                return;
+             }
+             else if (startTime.equalsIgnoreCase(getString(R.string.start_time)))
+             {
+                Dialogs.toast(mContext, v, getString(R.string.eventStartTimeRequired));
+                return;
+             }
+             else if (endTime.equalsIgnoreCase(getString(R.string.end_time)))
+             {
+                Dialogs.toast(mContext, v, getString(R.string.eventEndTimeRequired));
+                return;
+             }
+            }
+            if (eventOccuranceType.contains("daily")||eventOccuranceType.contains("weekly"))
+            {
+                if (startTime.equalsIgnoreCase(getString(R.string.start_time)))
+                {
+                    Dialogs.toast(mContext, v, getString(R.string.eventStartTimeRequired));
+                    return;
+                }
+                else if (endTime.equalsIgnoreCase(getString(R.string.end_time)))
+                {
+                    Dialogs.toast(mContext, v, getString(R.string.eventEndTimeRequired));
+                    return;
+                }
+            }
+            if (eventOccuranceType.contains("monthly"))
+            {
+                if (startTime.equalsIgnoreCase(getString(R.string.start_time)))
+                {
+                    Dialogs.toast(mContext, v, getString(R.string.eventStartTimeRequired));
+                    return;
+                }
+                else if (endTime.equalsIgnoreCase(getString(R.string.end_time)))
+                {
+                    Dialogs.toast(mContext, v, getString(R.string.eventEndTimeRequired));
+                    return;
+                }
+            }
+
             /*else if (!additionalInfo2.isEmpty() && additionalInfo2.length() < 200) {
                 binding.additionEt2.requestFocus();
                 Dialogs.toast(mContext, v, getString(R.string.addOnMin));
@@ -2552,8 +3023,8 @@ public class CreateEventFragment extends Fragment {
 //                requestBodyMap.put("state", RequestBody.create(MediaType.parse("multipart/form-data"), latLongt == null ? Utility.getState(activity, Double.parseDouble(selectedVenue.getLatitude()), Double.parseDouble(selectedVenue.getLongitude())) : Utility.getState(activity, latLongt.latitude, latLongt.longitude)));
 //            }
 
-       /* requestBodyMap.put("start", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localToUTC(startDateUtil)));
-        requestBodyMap.put("end", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localToUTC(endDateUtil)));*/
+//        requestBodyMap.put("start", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localToUTC(startDateUtil)));
+//        requestBodyMap.put("end", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localToUTC(endDateUtil)));
 
 //        requestBodyMap.put("start", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localFormat(startDateUtil)));
 //        requestBodyMap.put("end", RequestBody.create(MediaType.parse("multipart/form-data"), Utility.localFormat(endDateUtil)));
