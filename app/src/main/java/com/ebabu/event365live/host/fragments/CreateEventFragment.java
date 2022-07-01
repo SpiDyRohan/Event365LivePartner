@@ -777,7 +777,8 @@ public class CreateEventFragment extends Fragment {
         Date today = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
         getTodayDate = df.format(today);
-        if (update) {
+        if (update)
+        {
             loader.show("");
             deleteVenueImgList = new ArrayList<>();
             deletedPreviousImagesIds = new StringBuilder();
@@ -1477,10 +1478,10 @@ public class CreateEventFragment extends Fragment {
                                         {
                                             binding.typeSubSpinner.setText(chip1.getText().toString());
                                         }
-                                        if (!chip1.isChecked())
-                                        {
-                                            binding.typeSubSpinner.setText(getString(R.string.select_days));
-                                        }
+//                                        if (!chip1.isChecked())
+//                                        {
+//                                            binding.typeSubSpinner.setText(getString(R.string.select_days));
+//                                        }
                                     });
                                     binding.monthChipGroup.addView(chip1);
                                 }
@@ -1663,6 +1664,143 @@ public class CreateEventFragment extends Fragment {
 
                 }
             });
+            if (occuranceType.equals("oneTime"))
+             {
+                binding.typeSpinner.setSelection(0);
+             }
+            if (occuranceType.equals("daily"))
+             {
+                binding.typeSpinner.setSelection(1);
+             }
+            if (occuranceType.equals("weekly"))
+             {
+                binding.typeSpinner.setSelection(2);
+             }
+            if (occuranceType.equals("monthly"))
+             {
+                binding.typeSpinner.setSelection(3);
+             }
+            if (occuranceType.equals("daily")||occuranceType.equals("weekly"))
+             {
+              if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==1)
+               {
+                binding.typeSubSpinner.setText("Monday ");
+                binding.monday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_monst = Month.getString("mondayst", null);
+                String value_monet = Month.getString("mondayet", null);
+                binding.startTimeTvMon.setText(value_monst);
+                binding.endTimeTv2Mon.setText(value_monet);
+//                binding.startTimeTvMon.setText(StringUtils.getTime(updateEventDao.getStart()));
+//                binding.endTimeTv2Mon.setText(StringUtils.getTime(updateEventDao.getEnd()));
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==2)
+               {
+                binding.typeSubSpinner.setText("Tuesday ");
+                binding.tuesday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_tuesst = Month.getString("tuesdayst", null);
+                String value_tueset = Month.getString("tuesdayet", null);
+                binding.startTimeTvTues.setText(value_tuesst);
+                binding.endTimeTv2Tues.setText(value_tueset);
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==3)
+               {
+                binding.typeSubSpinner.setText("Wednesday ");
+                binding.wednesday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_wednesst = Month.getString("wednesdayst", null);
+                String value_wedneset = Month.getString("wednesdayet", null);
+                binding.startTimeTvWednes.setText(value_wednesst);
+                binding.endTimeTv2Wednes.setText(value_wedneset);
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==4)
+               {
+                binding.typeSubSpinner.setText("Thursday ");
+                binding.thursday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_thursst = Month.getString("thursdayst", null);
+                String value_thurset = Month.getString("thursdayet", null);
+                binding.startTimeTvThurs.setText(value_thursst);
+                binding.endTimeTv2Thurs.setText(value_thurset);
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==5)
+               {
+                binding.typeSubSpinner.setText("Friday ");
+                binding.friday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_frist = Month.getString("fridayst", null);
+                String value_friet = Month.getString("fridayet", null);
+                binding.startTimeTvFri.setText(value_frist);
+                binding.endTimeTv2Fri.setText(value_friet);
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==6)
+               {
+                binding.typeSubSpinner.setText("Saturday ");
+                binding.saturday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_saturst = Month.getString("saturdayst", null);
+                String value_saturet = Month.getString("saturdayet", null);
+                binding.startTimeTvSatur.setText(value_saturst);
+                binding.endTimeTv2Satur.setText(value_saturet);
+               }
+             if (updateEventDao.getEventOccurrence().get(0).getOccurredOn()==7)
+               {
+                binding.typeSubSpinner.setText("Sunday ");
+                binding.sunday.setVisibility(View.VISIBLE);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_Sunst = Month.getString("sundayst", null);
+                String value_Sunet = Month.getString("sundayet", null);
+                binding.startTimeTvSun.setText(value_Sunst);
+                binding.endTimeTv2Sun.setText(value_Sunet);
+               }
+            }
+            if (occuranceType.equals("monthly"))
+            {
+                String monthval1= String.valueOf(updateEventDao.getEventOccurrence().get(0).getOccurredOn());
+                binding.typeSubSpinner.setText(monthval1);
+                SharedPreferences Month = getContext().getSharedPreferences("demo", MODE_PRIVATE);
+                String value_Monthst = Month.getString("monthst", null);
+                String value_Monthet = Month.getString("monthet", null);
+                binding.startTimeTvWeek.setText(value_Monthst);
+                binding.endTimeTv2Week.setText(value_Monthet);
+            }
+            binding.typeSubSpinner.setOnClickListener(v ->
+            {
+                if (eventOccuranceType.contains("monthly"))
+                {
+                    if (!binding.typeSubSpinner.getText().toString().contains("Select"))
+                    {
+                        String currentdate=getTodayDate;
+                        String[] sarr = currentdate.split("/");
+                        int date= Integer.parseInt(sarr[1]);
+                        day = Integer.parseInt(binding.typeSubSpinner.getText().toString());
+                        month = Calendar.getInstance().get(Calendar.MONTH);
+                        year = Calendar.getInstance().get(Calendar.YEAR);
+                        if (day > date)
+                        {
+                            month = month + 1;
+                        }
+                        if (day <= date)
+                        {
+                            month = month + 2;
+                        }
+                        startDate = year + "-" + month + "-" + day;
+                        RegularTicketFragment fragment = new RegularTicketFragment();
+                        final Bundle bundle = new Bundle();
+                        bundle.putString("position", startDate);
+                        fragment.setArguments(bundle);
+                        createEventDAO.setStartDate(startDate);
+                        createEventDAO.setEndDate(startDate);
+                    }
+                }
+                if (update)
+                {
+                    binding.parentLayout.setVisibility(View.VISIBLE);
+                    return;
+                }
+                binding.parentLayout.setVisibility(View.VISIBLE);
+            });
         }
         else
         {
@@ -1792,6 +1930,7 @@ public class CreateEventFragment extends Fragment {
                                                 binding.monday.setVisibility(View.VISIBLE);
                                                 binding.txtviewmon.setVisibility(View.VISIBLE);
                                                 binding.commonlayout.setVisibility(View.GONE);
+
                                             } else {
                                                 binding.monday.setVisibility(View.GONE);
                                                 binding.txtviewmon.setVisibility(View.GONE);
